@@ -1,12 +1,39 @@
 /* GENERAL */
 .container {
+    position: relative;
     @include container();
+}
+
+.row-flex {
+    @include row-flex();
+
+    &__col-3 {
+        @include col();
+        @include size(3);
+    }
+
+    &__col-9 {
+        @include col();
+        @include size(9);
+    }
 }
 
 img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.section-link {
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    right: 15px;
+    color: $base-blue-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .slick-dots {
@@ -32,4 +59,8 @@ img {
             border: 1px solid #333333;
         }
     }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }

@@ -1,0 +1,111 @@
+//  Services
+.services {
+    padding-top: 55px;
+    padding-bottom: 80px;
+
+    background-color: #f9f9fa;
+    border-bottom: 1px solid #f2f2f2;
+
+    &__title {
+        position: relative;
+        margin-bottom: 35px;
+        color: $second-black-color;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 60px;
+            display: block;
+            width: 45px;
+            height: 4px;
+            background-color: $base-blue-color;
+        }
+    }
+
+    &__desc {
+        padding-top: 33px;
+        padding-bottom: 21px;
+        font-size: 18px;
+        line-height: 26px;
+        color: #222222;
+    }
+
+    &__another-text {
+        padding-bottom: 21px;
+        line-height: 24px;
+        color: #777777;
+    }
+
+    &__card-inner {
+        @include u-row-flex(0);
+        justify-content: space-between;
+
+        &:first-child {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__big-card {
+        position: relative;
+        @include u-col(0);
+        @include u-size(6, 12, 7px);
+    }
+
+    &__small-card {
+        position: relative;
+        @include u-col(0);
+        @include u-size(3, 12, 10px);
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    .img-wrap {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36)), url(.jpg);
+        }
+
+        &:hover ~ .services__card-desc p {
+            display: block;
+            // z-index: 11;
+        }
+    }
+
+    &__card-desc {
+        z-index: 100;
+
+        display: inline-block;
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+
+        span {
+            z-index: 1;
+            padding: 6px;
+            font-weight: 700;
+            color: #ffffff;
+            background-color: $base-blue-color;
+        }
+
+        p {
+            display: none;
+            max-width: 330px;
+            margin-top: 18px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 18px;
+            color: #ffffff;
+        }
+
+        &:hover p {
+            display: block;
+        }
+    }
+}
