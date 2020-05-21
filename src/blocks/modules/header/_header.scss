@@ -16,15 +16,31 @@
         @include row-flex();
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 992px) {
+            & .top-header__item:first-child {
+                @include size(12);
+            }
+        }
     }
 
     &__item {
         @include col();
     }
 
+    &__logo {
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
     &__slogan {
         max-width: 214px;
         color: #777777;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
     &__adress {
@@ -34,7 +50,7 @@
         color: #222222;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             display: block;
@@ -59,7 +75,7 @@
         color: #222222;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: -2px;
             top: 4px;
