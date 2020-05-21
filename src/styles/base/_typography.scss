@@ -9,25 +9,30 @@ body {
 }
 
 h1 {
-    font-size: 36px;
     margin-bottom: 21px;
+    font-size: 36px;
     font-weight: bold;
 }
 
 h2 {
+    margin-bottom: 38px;
     font-size: 25px;
     font-weight: 500;
+    color: $second-black-color;
 }
 
-/*
 h3 {
-    font-size: 24px;
-    line-height: $base-line-height;
-    margin-bottom: $base-line-height;
-    font-weight: bold;
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #222222;
 }
-*/
 
 a {
     text-decoration: none;
+
+    &:visited {
+        color: #222222;
+    }
 }

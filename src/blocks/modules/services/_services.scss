@@ -6,10 +6,18 @@
     background-color: #f9f9fa;
     border-bottom: 1px solid #f2f2f2;
 
+    @include lg-block() {
+        .row-flex__col-3,
+        .row-flex__col-9 {
+            width: 100%;
+        }
+    } 
+
+    @include sm(padding-bottom, 40px);
+
     &__title {
         position: relative;
         margin-bottom: 35px;
-        color: $second-black-color;
 
         &::after {
             content: "";
@@ -36,6 +44,11 @@
         color: #777777;
     }
 
+    &__button {
+        margin-bottom: 30px;
+        @include md (margin-bottom, 0);
+    }
+
     &__card-inner {
         @include u-row-flex(0);
         justify-content: space-between;
@@ -49,12 +62,24 @@
         position: relative;
         @include u-col(0);
         @include u-size(6, 12, 7px);
+        @include md-block() {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        };
     }
 
     &__small-card {
         position: relative;
         @include u-col(0);
         @include u-size(3, 12, 10px);
+        @include md-block() {
+            width: 50%;
+            margin-bottom: 10px;
+            &:nth-child(2) {
+                // margin-right: 10px;
+            }
+        };
     }
 
     &__img {
@@ -69,7 +94,7 @@
         width: 100%;
 
         &:hover {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36)), url(.jpg);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36));
         }
 
         &:hover ~ .services__card-desc p {
@@ -92,6 +117,7 @@
             font-weight: 700;
             color: #ffffff;
             background-color: $base-blue-color;
+            @include sm(font-size, 12px);
         }
 
         p {
@@ -102,6 +128,7 @@
             font-weight: 500;
             line-height: 18px;
             color: #ffffff;
+            @include sm(font-size, 12px);
         }
 
         &:hover p {
