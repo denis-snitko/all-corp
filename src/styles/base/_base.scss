@@ -2,22 +2,3 @@
 .container {
     @include container();
 }
-
-// BUTTONS
-.base-button {
-    display: block;
-    padding: 14px 18px;
-    font-size: 14px;
-    color: $base-blue-color;
-    background: transparent;
-    border: 1px solid $base-blue-color;
-    border-radius: 2px;
-    transition: $base-transition;
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-        color: #ffffff;
-        background-color: $base-blue-color;
-    }
-}

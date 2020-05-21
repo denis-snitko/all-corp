@@ -1,0 +1,18 @@
+// BUTTONS
+.base-button {
+    display: block;
+    border: 1px solid $base-blue-color;
+    padding: 14px 18px;
+    transition: $base-transition;
+    font-size: 14px;
+    color: $base-blue-color;
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        color: #ffffff;
+        background-color: $base-blue-color;
+    }
+}
