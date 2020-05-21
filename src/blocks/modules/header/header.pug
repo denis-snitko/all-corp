@@ -1,5 +1,19 @@
 // Header
 header.header
-    h1.header__title
-        | Header
+    .container
+        .top-header.top-header__row
+            .top-header__item
+                .logo.top-header__logo
+                    include ../../components/logo/logo.pug
+            .top-header__item
+                p.top-header__slogan Готовое решение для создания корпоративного сайта
+            .top-header__item
+                .top-header__adress Челябинск, ул.Лермонтова 21, 3 этаж, офис 4
+            .top-header__item
+                .top-header__city Челябинск
+            .top-header__item
+                a.top-header__tel(href='tel:+7(000)0000000') +7 (000) 000-00-00
+                span.top-header__work Пн - Вс: 10.00 - 19.00
+            .top-header__item
+                button.base-button Заказать звонок
 // ./Header

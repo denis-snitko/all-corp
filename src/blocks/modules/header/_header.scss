@@ -1,1 +1,81 @@
 // Header
+.header {
+    background: url("../img/header/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 660px;
+}
+
+.top-header {
+    padding: 29px 0;
+
+    font-size: $base-font-size - 1;
+    line-height: 20px;
+
+    &__row {
+        @include row-flex();
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include col();
+    }
+
+    &__slogan {
+        max-width: 214px;
+        color: #777777;
+    }
+
+    &__adress {
+        position: relative;
+        max-width: 224px;
+        padding-left: 20px;
+        color: #222222;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 13px;
+            height: 16px;
+            background: url(../img/svg/mark.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__city {
+        color: #222222;
+    }
+
+    &__tel {
+        position: relative;
+        display: block;
+        padding-left: 20px;
+        font-size: $base-font-size;
+        font-weight: 700;
+        color: #222222;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 4px;
+            display: block;
+            width: 14px;
+            height: 14px;
+            background: url(../img/svg/tel.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__work {
+        padding-left: 20px;
+        font-size: $base-font-size - 3;
+        color: #888888;
+    }
+}
