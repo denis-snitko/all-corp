@@ -1,9 +1,10 @@
 .menu {
     border-bottom: 1px solid #e6ebe9;
-
+    
     .sub-menu {
         display: none;
         position: absolute;
+        z-index: 100;
         margin-top: 20px;
 
         background-color: #ffffff;

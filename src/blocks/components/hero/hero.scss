@@ -1,0 +1,46 @@
+.hero {
+    @include row-flex();
+
+    &-item {
+        @include col();
+        @include size(6);
+        @include size-lg(12);
+    }
+
+    &__title {
+        margin-top: 70px;
+        color: #333333;
+    }
+
+    &__desc {
+        margin-bottom: 26px;
+        line-height: 26px;
+        font-size: 16px;
+    }
+
+    &__button {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: $base-blue-color;
+
+        &:hover {
+            color: $base-blue-color;
+            background-color: #ffffff;
+        }
+
+        &--second {
+            margin-left: 20px;
+            color: #333333;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+
+            &:hover {
+                color: #ffffff;
+                background-color: #333333;
+                border: 1px solid #333333;
+            }
+        }
+    }
+}

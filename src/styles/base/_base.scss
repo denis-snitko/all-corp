@@ -2,3 +2,34 @@
 .container {
     @include container();
 }
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slick-dots {
+    bottom: 20px;
+
+    li {
+        margin: 0;
+        button {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+
+            &::before {
+                content: "";
+            }
+        }
+    }
+
+    .slick-active {
+        button {
+            background-color: #333333;
+            border: 1px solid #333333;
+        }
+    }
+}
