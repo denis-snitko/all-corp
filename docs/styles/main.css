@@ -976,7 +976,11 @@ img {
   display: inline-block;
   margin-bottom: 15px;
   font-size: 11px;
-  text-transform: uppercase
+  text-transform: uppercase;
+  color: #08c
+}
+.articles-item__category:hover {
+  text-decoration: underline
 }
 .articles-item__title {
   display: block;

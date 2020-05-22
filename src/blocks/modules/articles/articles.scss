@@ -16,6 +16,11 @@
             margin-bottom: 15px;
             font-size: 11px;
             text-transform: uppercase;
+            color: $base-blue-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &__title {
