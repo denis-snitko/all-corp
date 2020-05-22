@@ -19,6 +19,7 @@
         @include u-col(0);
         @include u-size(6, 12, 0px);
         @include size-md(12);
+        @include md(margin-bottom, 15px);
         border: 1px solid #f5f5f5;
         transition: box-shadow .2s linear;
 
