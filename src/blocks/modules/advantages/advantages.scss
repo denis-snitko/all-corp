@@ -1,0 +1,38 @@
+// Advantages
+.advantages {
+    padding-top: 55px;
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid #f2f2f2;
+
+    &__row {
+        @include row-flex();
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include col();
+        @include size(3);
+        @include size-lg(6);
+        @include size-sm(12);
+
+        @include lg(margin-bottom, 20px);
+    }
+
+    &__card {
+        display: flex;
+    }
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    &__text-inner {
+    }
+
+    &__desc {
+        font-size: 13px;
+    }
+}
