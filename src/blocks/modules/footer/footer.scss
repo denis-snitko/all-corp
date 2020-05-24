@@ -1,0 +1,125 @@
+// Footer
+.footer {
+    padding-bottom: 22px;
+    background-color: #373d44;
+
+    .footer-subscribe {
+        padding: 25px 0;
+        background: rgba(255, 255, 255, 0.05);
+
+        &__inner {
+            // border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include sm-block {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        &__icon {
+            margin-right: 29px;
+            @include lg(display, none);
+        }
+
+        &__text {
+            margin-right: 38px;
+            max-width: 130px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #ffffff;
+            @include lg(margin-left, 15px);
+            @include sm(padding-bottom, 20px);
+        }
+    }
+
+    .footer-form {
+        position: relative;
+        width: 640px;
+        @include sm(margin-left, 15px);
+
+        &__input {
+            width: 465px;
+            // width: 100%;
+            padding: 16px;
+            padding-bottom: 16px;
+            border: none;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            @include md(width, 430px);
+            @include sm(width, 265px);
+            @media (max-width: 435px) {
+                width: 165px;
+            }
+        }
+
+        &__button {
+            padding-bottom: 15px !important;
+            font-weight: 700;
+            color: #ffffff !important;
+            background-color: $base-blue-color !important;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            position: absolute;
+        }
+    }
+
+    .footer-content {
+        padding-top: 34px;
+        padding-bottom: 40px;
+
+        border-bottom: 1px solid #41474e;
+
+        &__row {
+            @include row-flex();
+            // display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            @include col();
+        }
+
+        &__item-title {
+            margin-bottom: 17px;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #ffffff;
+        }
+    }
+
+    .footer-menu {
+        @include lg(margin-bottom, 30px);
+
+        &__item {
+            margin-bottom: 10px;
+        }
+        &__link {
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: #a7a7a7;
+            transition: $base-transition;
+
+            &:hover {
+                color: #ffffff
+            }
+        }
+    }
+
+    .footer-contacts {
+        @include lg-block() {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &__item {
+            
+            border: 1px solid #000;
+        }
+       
+    }
+}
