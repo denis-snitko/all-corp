@@ -1,0 +1,117 @@
+// Reviews
+.reviews {
+    padding-top: 55px;
+    padding-bottom: 65px;
+    border-bottom: 1px solid #f2f2f2;
+
+    .section-link__reviews {
+        right: 120px;
+    }
+
+    .reviews-slider {
+        .owl-prev,
+        .owl-next {
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top: -72px;
+
+            background-color: $base-blue-color;
+            border-radius: 50%;
+            transition: $base-transition;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                top: 9px;
+                right: 10px;
+                width: 16px;
+                height: 16px;
+                background-image: url("../img/icons/arrow-left.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            &:hover {
+                background-color: #009ce8;
+            }
+        }
+        .owl-prev {
+            right: 43px;
+            &:after {
+                background-image: url("../img/icons/arrow-left.svg");
+            }
+        }
+        .owl-next {
+            right: 0;
+            &:after {
+                right: 7px;
+                background-image: url("../img/icons/arrow-right.svg");
+            }
+        }
+
+        .owl-dot span {
+            width: 8px;
+            height: 8px;
+            background-color: #cad2d6;
+        }
+        .owl-dot.active span {
+            width: 8px;
+            height: 8px;
+            background-color: $base-blue-color;
+        }
+    }
+
+    .review-item {
+        // margin-right: 28px;
+        border: 1px solid #f5f5f5;
+        padding: 25px 30px 25px 55px;
+
+        .avatar {
+            display: flex;
+            margin-bottom: 12px;
+
+            &__img {
+                margin-right: 12px;
+                width: 50px;
+                height: 50px;
+            }
+
+            &__name {
+                line-height: 20px;
+                color: #333333;
+            }
+
+            &__prof {
+                font-size: 12px;
+                color: #777777;
+            }
+        }
+
+        &__text {
+            position: relative;
+
+            &::before {
+                // border: 1px solid #000;
+                content: "";
+                position: absolute;
+                left: -30px;
+                top: 1px;
+                display: block;
+                width: 18px;
+                height: 14px;
+                background-image: url("../img/icons/quot.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            font-size: 16px;
+            line-height: $base-line-height;
+            // color: ;
+
+            p {
+                margin-bottom: 21px;
+            }
+        }
+    }
+}
