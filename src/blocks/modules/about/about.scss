@@ -1,0 +1,39 @@
+// About
+.about {
+    margin-top: 55px;
+    background-image: url("../img/about/about-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-x: 90%;
+    @include md(background-image, none);
+    // background-image: none;
+
+    &__title {
+        padding-top: 67px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 24px;
+
+        color: #222222;
+
+        @include md(padding-top, 0);
+    }
+
+    &__text-inner {
+        padding-bottom: 70px;
+        max-width: 65%;
+        line-height: 24px;
+
+        @include lg(max-width, 55%);
+
+        @include md-block() {
+            max-width: 100%;
+            padding-bottom: 55px;
+        }
+
+        p {
+            margin-bottom: 21px;
+        }
+    }
+}

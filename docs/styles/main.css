@@ -1391,6 +1391,29 @@ img {
 .reviews .review-item__text p {
   margin-bottom: 21px
 }
+.about {
+  margin-top: 55px;
+  background-image: url(../img/about/about-bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-x: 90%
+}
+.about__title {
+  padding-top: 67px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 24px;
+  color: #222
+}
+.about__text-inner {
+  padding-bottom: 70px;
+  max-width: 65%;
+  line-height: 24px
+}
+.about__text-inner p {
+  margin-bottom: 21px
+}
 .base-button {
   display: inline-block;
   border: 1px solid #08c;
@@ -1584,6 +1607,9 @@ img {
     width: calc(50% - 30px);
     margin-bottom: 20px
   }
+  .about__text-inner {
+    max-width: 55%
+  }
   .hero-item {
     width: calc(100% - 30px)
   }
@@ -1617,6 +1643,16 @@ img {
   .catalog__item {
     width: calc(100% - 30px);
     margin-bottom: 15px
+  }
+  .about {
+    background-image: none
+  }
+  .about__title {
+    padding-top: 0
+  }
+  .about__text-inner {
+    max-width: 100%;
+    padding-bottom: 55px
   }
 }
 @media screen and (max-width:576px) {
