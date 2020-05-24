@@ -5,8 +5,9 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-position-x: 90%;
+    border-bottom: 1px solid #f2f2f2;
+    
     @include md(background-image, none);
-    // background-image: none;
 
     &__title {
         padding-top: 67px;
