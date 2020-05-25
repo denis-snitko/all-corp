@@ -4,6 +4,11 @@
     }
     border-bottom: 1px solid #e6ebe9;
 
+    &--page {
+    border-top: 1px solid #e6ebe9;
+    border-bottom: none;
+    }
+
     .sub-menu {
         display: none;
         position: absolute;
