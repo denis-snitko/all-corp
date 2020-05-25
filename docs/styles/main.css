@@ -1492,6 +1492,8 @@ img {
   position: absolute
 }
 .footer .footer-content {
+  padding-top: 34px;
+  padding-bottom: 34px;
   border-bottom: 1px solid #41474e
 }
 .footer .footer-content__row {
@@ -1511,45 +1513,19 @@ img {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% - 30px)
+  margin-right: 15px
 }
 .footer .footer-content__item-title {
-  position: relative;
+  margin-bottom: 17px;
   font-size: 15px;
   line-height: 18px;
-  color: #fff;
-  padding: 14px 0;
-  margin-bottom: 0;
-  border-bottom: 1px solid #41474e;
-  cursor: pointer
-}
-.footer .footer-content__item-title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  width: 8px;
-  height: 5px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: url(../img/svg/arrow-down.svg) center no-repeat
-}
-.footer .footer-content__item-title--active:after {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg)
-}
-.footer .footer-menu {
-  display: none;
-  margin-top: 14px
+  color: #fff
 }
 .footer .footer-menu__item {
   margin-bottom: 10px
 }
 .footer .footer-menu__link {
+  font-family: Roboto;
   font-size: 14px;
   line-height: 18px;
   color: #a7a7a7;
@@ -1560,13 +1536,14 @@ img {
 .footer .footer-menu__link:hover {
   color: #fff
 }
-.footer .footer-contacts {
-  display: none;
-  padding: 14px 0
-}
 .footer .footer-contacts__item {
-  position: relative;
-  padding-bottom: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 20px;
+  margin-bottom: 20px;
   color: #fff
 }
 .footer .footer-contacts__item p {
@@ -1575,14 +1552,12 @@ img {
   color: #888
 }
 .footer .footer-contacts__item span {
-  margin-left: 25px;
-  display: inline-block
+  position: relative
 }
 .footer .footer-contacts__item span::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: -2px;
+  left: -20px;
   display: block;
   width: 13px;
   height: 16px;
@@ -1590,8 +1565,6 @@ img {
 }
 .footer .footer-contacts__link {
   position: relative;
-  margin-left: 25px;
-  line-height: 22px;
   color: inherit;
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
@@ -1600,29 +1573,28 @@ img {
 .footer .footer-contacts__link:hover {
   color: #08c
 }
-.footer .footer-contacts__link + p {
-  margin-left: 25px
-}
 .footer .footer-contacts__link::before {
   content: "";
   position: absolute;
+  left: -20px;
   top: 2px;
   display: block;
   width: 14px;
   height: 14px;
   background: url(../img/svg/tel.svg) center no-repeat
 }
-.footer .footer-contacts__link--mail {
-  position: relative
-}
 .footer .footer-contacts__link--mail::before {
   content: "";
   position: absolute;
+  left: -22px;
   top: 2px;
   display: block;
   width: 16px;
   height: 14px;
   background: url(../img/svg/mail.svg) center no-repeat
+}
+.footer__copyright {
+  padding-top: 22px
 }
 .base-button {
   display: inline-block;
@@ -1763,6 +1735,26 @@ img {
     display: none
   }
 }
+@media screen and (max-width:1200px) {
+  .footer .footer-content {
+    padding-bottom: 0
+  }
+  .footer .footer-menu {
+    margin-bottom: 30px
+  }
+  .footer .footer-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important
+  }
+}
 @media screen and (max-width:992px) {
   .grid-container {
     -ms-grid-columns: 1fr 1fr;
@@ -1824,8 +1816,14 @@ img {
     -ms-flex-pack: distribute;
     justify-content: space-around
   }
+  .footer .footer-subscribe__icon {
+    display: none
+  }
   .footer .footer-subscribe__text {
     margin-left: 15px
+  }
+  .footer .contacts-block {
+    width: 100%
   }
   .hero-item {
     width: calc(100% - 30px)
@@ -1871,11 +1869,18 @@ img {
     max-width: 100%;
     padding-bottom: 55px
   }
+  .footer .footer-form,
+  .footer .footer-subscribe {
+    display: none
+  }
   .footer .footer-form__input {
     width: 430px
   }
   .footer .footer-content {
-    padding-top: 0
+    display: none
+  }
+  .footer .footer-contacts__item {
+    width: calc(100% - 30px)
   }
 }
 @media screen and (max-width:576px) {
@@ -1964,9 +1969,6 @@ img {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start
-  }
-  .footer .footer-subscribe__icon {
-    display: none
   }
   .footer .footer-subscribe__text {
     padding-bottom: 20px
