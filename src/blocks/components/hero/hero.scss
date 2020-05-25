@@ -10,6 +10,7 @@
     &__title {
         margin-top: 70px;
         color: #333333;
+        @include lg (margin-top, 100px);
     }
 
     &__desc {

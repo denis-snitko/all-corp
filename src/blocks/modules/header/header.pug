@@ -15,7 +15,72 @@ header.header
                 a.top-header__tel(href='tel:+7(000)0000000') +7 (000) 000-00-00
                 span.top-header__work Пн - Вс: 10.00 - 19.00
             .top-header__item
-                button.base-button Заказать звонок
+                button.base-button.top-header__button Заказать звонок
+            .burger-menu(data-menuburgeropen='')
+                span.burger-menu__burger-line
+                .burger-menu__container
+                    span.burger-menu__close
+                    
+                    ul.burger-menu__list
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Компания
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') О компании
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') История
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Лицензии
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Партнеры
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Сотрудники
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Каталог
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') О компании
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') История
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Лицензии
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Услуги
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') О компании
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') История
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Лицензии
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Партнеры
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Проекты
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') О компании
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') История
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Курсы
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Курсы
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Цены
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Цены
+                        li.burger-menu__item
+                            a.burger-menu__link(href='#') Информация
+                            ul.sub-menu
+                                li.sub-menu__item
+                                    a.sub-menu__link(href='#') Информация
+                        li.burger-menu__item
+                            a.burger-menu__link.burger-menu__link-contacts(href='#') Контакты
+                        
+
         include ../../components/menu/menu.pug
         include ../../components/hero/hero.pug
 // ./Header

@@ -742,6 +742,7 @@ img {
   background-size: cover
 }
 .top-header {
+  position: relative;
   padding: 29px 0;
   font-size: 14px;
   line-height: 20px
@@ -1682,6 +1683,105 @@ img {
 .menu__link-contacts::after {
   display: none
 }
+.burger-menu {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  margin: 10px 0;
+  display: none;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer
+}
+.burger-menu__burger-line {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background-color: #08c
+}
+.burger-menu__burger-line::after,
+.burger-menu__burger-line::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #08c
+}
+.burger-menu__burger-line::before {
+  top: -8px
+}
+.burger-menu__burger-line::after {
+  top: 8px
+}
+.burger-menu__close {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 30px;
+  background-color: #08c
+}
+.burger-menu__close::after,
+.burger-menu__close::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #08c
+}
+.burger-menu__close::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+.burger-menu__close::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+.burger-menu__container {
+  position: fixed;
+  z-index: 1005;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  background-color: #fff
+}
+.burger-menu .show-burger {
+  left: 0
+}
+.burger-menu__list {
+  margin-top: 20px
+}
+.burger-menu__link {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: #000
+}
+.burger-menu .sub-menu__item {
+  padding-left: 20px
+}
+.burger-menu .sub-menu__link {
+  display: inline-block;
+  padding: 6px 0;
+  color: #000;
+  text-transform: none
+}
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1797,6 +1897,28 @@ img {
     -ms-grid-column-span: 1;
     grid-area: 4/2/5/3
   }
+  .top-header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    background-color: #e2eaec
+  }
+  .top-header__item {
+    width: calc(100% - 30px)
+  }
+  .top-header__item:not(:first-child) {
+    margin: 0;
+    width: 0
+  }
+  .top-header__adress,
+  .top-header__button,
+  .top-header__city,
+  .top-header__tel,
+  .top-header__work {
+    display: none
+  }
   .services .row-flex__col-3,
   .services .row-flex__col-9 {
     width: 100%
@@ -1825,16 +1947,19 @@ img {
   .footer .contacts-block {
     width: 100%
   }
+  .menu {
+    display: none
+  }
   .hero-item {
     width: calc(100% - 30px)
   }
+  .hero__title {
+    margin-top: 100px
+  }
 }
 @media (max-width:992px) {
-  .top-header__row .top-header__item:first-child {
-    width: calc(100% - 30px)
-  }
-  .top-header__logo {
-    width: 100%
+  .burger-menu {
+    display: block
   }
 }
 @media screen and (max-width:768px) {

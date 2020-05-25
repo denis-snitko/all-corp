@@ -7,32 +7,38 @@
 }
 
 .top-header {
+    position: relative;
     padding: 29px 0;
 
     font-size: $base-font-size - 1;
     line-height: 20px;
 
+    @include lg-block() {
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 16px;
+        padding-bottom: 14px;
+        background-color: #e2eaec;
+    }
+
     &__row {
         @include row-flex();
         align-items: center;
         justify-content: space-between;
-
-        @media (max-width: 992px) {
-            & .top-header__item:first-child {
-                @include size(12);
-            }
-        }
     }
 
     &__item {
         @include col();
-    }
-
-    &__logo {
-        @media (max-width: 992px) {
-            width: 100%;
+        @include size-lg(12);
+        @include lg-block() {
+            &:not(:first-child) {
+                margin: 0;
+                width: 0;
+            }
         }
     }
+
 
     &__slogan {
         max-width: 214px;
@@ -48,6 +54,7 @@
         max-width: 224px;
         padding-left: 20px;
         color: #222222;
+        @include lg(display, none);
 
         &::before {
             content: "";
@@ -64,6 +71,7 @@
 
     &__city {
         color: #222222;
+        @include lg(display, none);
     }
 
     &__tel {
@@ -73,6 +81,7 @@
         font-size: $base-font-size;
         font-weight: 700;
         color: #222222;
+        @include lg(display, none);
 
         &::before {
             content: "";
@@ -88,9 +97,14 @@
         }
     }
 
+    &__button {
+        @include lg(display, none);
+    }
+
     &__work {
         padding-left: 20px;
         font-size: $base-font-size - 3;
         color: #888888;
+        @include lg(display, none);
     }
 }
