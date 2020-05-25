@@ -6,7 +6,7 @@
     .footer-subscribe {
         padding: 25px 0;
         background: rgba(255, 255, 255, 0.05);
-
+        @include md(display, none);
         &__inner {
             // border: 1px solid #000;
             display: flex;
@@ -20,7 +20,7 @@
 
         &__icon {
             margin-right: 29px;
-            @include sm(display, none);
+            @include lg(display, none);
         }
 
         &__text {
@@ -37,6 +37,7 @@
     .footer-form {
         position: relative;
         width: 640px;
+        @include md(display, none);
         @include sm(margin-left, 15px);
 
         &__input {
@@ -66,14 +67,12 @@
     }
 
     .footer-content {
-        // padding-top: 34px;
-        // padding-bottom: 40px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        @include xl(padding-bottom, 0);
+        @include md(display, none);
 
         border-bottom: 1px solid #41474e;
-
-        @include md-block() {
-            padding-top: 0;
-        }
 
         &__row {
             @include row-flex();
@@ -82,52 +81,26 @@
 
         &__item {
             @include col();
-            @include size(12);
         }
 
         &__item-title {
-            position: relative;
+            margin-bottom: 17px;
             font-size: 15px;
             line-height: 18px;
 
             color: #ffffff;
-
-            padding: 14px 0;
-            margin-bottom: 0;
-
-            border-bottom: 1px solid #41474e;
-            cursor: pointer;
-
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 5px;
-                width: 8px;
-                height: 5px;
-                transform: translateY(-50%);
-                background: url(../img/svg/arrow-down.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            &--active {
-                &:after {
-                    transform: rotate(180deg);
-                }
-            }
         }
     }
 
     .footer-menu {
-        display: none;
-        margin-top: 14px;
+        @include xl(margin-bottom, 30px);
 
         &__item {
             margin-bottom: 10px;
         }
+
         &__link {
+            font-family: Roboto;
             font-size: 14px;
             line-height: 18px;
 
@@ -141,13 +114,16 @@
     }
 
     .footer-contacts {
-        display: none;
-        padding: 14px 0;
+        @include xl-block() {
+            @include row-flex();
+            justify-content: space-between !important;
+        }
 
         &__item {
-            position: relative;
-
-            padding-bottom: 12px;
+            @include col();
+            @include size-md(12);
+            padding-left: 20px;
+            margin-bottom: 20px;
             color: #ffffff;
 
             p {
@@ -157,13 +133,11 @@
             }
 
             span {
-                margin-left: 25px;
-                display: inline-block;
+                position: relative;
                 &::before {
                     content: "";
                     position: absolute;
-                    left: 0;
-                    top: -2px;
+                    left: -20px;
                     display: block;
                     width: 13px;
                     height: 16px;
@@ -176,8 +150,6 @@
 
         &__link {
             position: relative;
-            margin-left: 25px;
-            line-height: 22px;
             color: inherit;
             transition: $base-transition;
 
@@ -185,13 +157,10 @@
                 color: $base-blue-color;
             }
 
-            & + p {
-                margin-left: 25px;
-            }
-            
             &::before {
                 content: "";
                 position: absolute;
+                left: -20px;
                 top: 2px;
                 display: block;
                 width: 14px;
@@ -202,10 +171,10 @@
             }
 
             &--mail {
-                position: relative;
                 &::before {
                     content: "";
                     position: absolute;
+                    left: -22px;
                     top: 2px;
                     display: block;
                     width: 16px;
@@ -218,4 +187,11 @@
         }
     }
 
+    .contacts-block {
+        @include lg(width, 100%);
+    }
+
+    &__copyright {
+        padding-top: 22px;
+    }
 }
