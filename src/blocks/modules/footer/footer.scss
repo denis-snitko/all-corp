@@ -20,7 +20,7 @@
 
         &__icon {
             margin-right: 29px;
-            @include lg(display, none);
+            @include sm(display, none);
         }
 
         &__text {
@@ -66,38 +66,68 @@
     }
 
     .footer-content {
-        padding-top: 34px;
-        padding-bottom: 40px;
+        // padding-top: 34px;
+        // padding-bottom: 40px;
 
         border-bottom: 1px solid #41474e;
 
+        @include md-block() {
+            padding-top: 0;
+        }
+
         &__row {
             @include row-flex();
-            // display: flex;
             justify-content: space-between;
         }
 
         &__item {
             @include col();
+            @include size(12);
         }
 
         &__item-title {
-            margin-bottom: 17px;
+            position: relative;
             font-size: 15px;
             line-height: 18px;
 
             color: #ffffff;
+
+            padding: 14px 0;
+            margin-bottom: 0;
+
+            border-bottom: 1px solid #41474e;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                width: 8px;
+                height: 5px;
+                transform: translateY(-50%);
+                background: url(../img/svg/arrow-down.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &--active {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 
     .footer-menu {
-        @include lg(margin-bottom, 30px);
+        display: none;
+        margin-top: 14px;
 
         &__item {
             margin-bottom: 10px;
         }
         &__link {
-            font-family: Roboto;
             font-size: 14px;
             line-height: 18px;
 
@@ -105,21 +135,87 @@
             transition: $base-transition;
 
             &:hover {
-                color: #ffffff
+                color: #ffffff;
             }
         }
     }
 
     .footer-contacts {
-        @include lg-block() {
-            display: flex;
-            justify-content: space-between;
-        }
-        
+        display: none;
+        padding: 14px 0;
+
         &__item {
-            
-            border: 1px solid #000;
+            position: relative;
+
+            padding-bottom: 12px;
+            color: #ffffff;
+
+            p {
+                font-size: 12px;
+                line-height: 18px;
+                color: #888888;
+            }
+
+            span {
+                margin-left: 25px;
+                display: inline-block;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    display: block;
+                    width: 13px;
+                    height: 16px;
+                    background: url(../img/svg/mark.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
         }
-       
+
+        &__link {
+            position: relative;
+            margin-left: 25px;
+            line-height: 22px;
+            color: inherit;
+            transition: $base-transition;
+
+            &:hover {
+                color: $base-blue-color;
+            }
+
+            & + p {
+                margin-left: 25px;
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                display: block;
+                width: 14px;
+                height: 14px;
+                background: url(../img/svg/tel.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &--mail {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    display: block;
+                    width: 16px;
+                    height: 14px;
+                    background: url(../img/svg/mail.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
     }
+
 }

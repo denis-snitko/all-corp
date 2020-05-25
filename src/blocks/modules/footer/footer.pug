@@ -14,8 +14,8 @@ footer.footer
         .footer-content
             .footer-content__row
                 .footer-content__item
-                    .footer-content__item-title Компания
-                    ul.footer-menu
+                    .footer-content__item-title(data='item__title') Компания
+                    ul.footer-menu.footer-menu
                         li.footer-menu__item
                             a.footer-menu__link(href="#") О компании
                         li.footer-menu__item
@@ -33,7 +33,7 @@ footer.footer
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Реквизиты
                 .footer-content__item
-                    .footer-content__item-title Каталог
+                    .footer-content__item-title(data='item__title') Каталог
                     ul.footer-menu
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Аренда спецтехники
@@ -52,7 +52,7 @@ footer.footer
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Дизайнерская мебель
                 .footer-content__item
-                    .footer-content__item-title Услуги
+                    .footer-content__item-title(data='item__title') Услуги
                     ul.footer-menu
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Автоматизация
@@ -67,7 +67,7 @@ footer.footer
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Проектирование
                 .footer-content__item
-                    .footer-content__item-title Возможности
+                    .footer-content__item-title(data='item__title') Возможности
                     ul.footer-menu
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Оформление
@@ -78,12 +78,12 @@ footer.footer
                         li.footer-menu__item
                             a.footer-menu__link(href="#") Элементы
                 .footer-content__item
-                    .footer-content__item-title Наши контакты
+                    .footer-content__item-title.contacts-block(data='item__title') Наши контакты
                     ul.footer-contacts
                         li.footer-contacts__item
                             a.footer-contacts__link(href="+70000000000") +7 (000) 000-00-00
                             p Пн - Вс: 10.00 - 19.00
                         li.footer-contacts__item
-                            | Челябинск, ул. Лермонтова 21, 3 этаж, офис 4
+                            span Челябинск, ул. Лермонтова 21, 3 этаж, офис 4
                         li.footer-contacts__item
-                            a.footer-contacts__link(href="mail:no-reply@aspro-demo.ru") no-reply@aspro-demo.ru
+                            a.footer-contacts__link.footer-contacts__link--mail(href="mail:no-reply@aspro-demo.ru") no-reply@aspro-demo.ru
