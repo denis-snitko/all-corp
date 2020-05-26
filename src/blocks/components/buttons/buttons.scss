@@ -16,3 +16,13 @@
         background-color: $base-blue-color;
     }
 }
+
+.second-button {
+    color: #ffffff;
+    background-color: $base-blue-color;
+
+    &:hover {
+        color: $base-blue-color;
+        background-color: #ffffff;
+    }
+}

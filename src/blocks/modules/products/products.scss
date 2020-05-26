@@ -85,9 +85,10 @@
 
         &__img {
             display: inline-block;
-            width: 212px;
+            max-width: 212px;
             height: 212px;
             margin-bottom: 15px;
+            text-align: center;
         }
 
         &__text-inner {

@@ -3,6 +3,187 @@
     background-color: #f3f3f3;
 
     .page-product-card {
-        border: 1px solid #f2f2f2;
+        margin-bottom: 35px;
+        border: $base-border;
+
+        a {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 24px;
+
+            color: $base-blue-color;
+
+            border-bottom: 1px solid $base-blue-color;
+
+            &:hover {
+                color: darken($base-blue-color, 2);
+            }
+        }
+    }
+
+    .page-product-advantages {
+        &__row {
+            @include row-flex();
+        }
+
+        &__col-9 {
+            @include col();
+            @include size(9);
+            @include size-md(12);
+            border: $base-border;
+        }
+
+        &__col-3 {
+            @include col();
+            @include size(3);
+            @include md(display, none);
+            border: $base-border;
+        }
+
+        .advantages-row {
+            padding: 68px 54px;
+            @include row-flex();
+            @include md(padding-top, 34px);
+            @include md(padding-bottom, 0);
+
+            &__col {
+                @include col();
+                @include size(4);
+                @include size-md(12);
+            }
+
+            &-item {
+                @include md(margin-bottom, 30px);
+                &__img {
+                    margin-bottom: 3px;
+                }
+
+                &__title {
+                    line-height: 24px;
+
+                    color: #222222;
+                }
+
+                &__desc {
+                    font-size: 13px;
+                    line-height: 20px;
+
+                    color: #666666;
+                }
+            }
+        }
+    }
+
+    .page-product-aside {
+        &__img {
+            padding: 35px 10px 35px 30px;
+        }
+
+        &__desc {
+            padding: 20px 10px 20px 30px;
+            
+            font-size: 14px;
+            line-height: 24px;
+            
+            color: #666666;
+
+            border-top: $base-border;
+        }
+
+        &__link {
+            display: block;
+            padding-left: 30px;
+            padding-bottom: 10px;
+
+            color: $base-blue-color;
+        }
+    }
+}
+
+.card {
+    &__row {
+        @include row-flex();
+        margin: 0;
+
+        .card__col-8 {
+            @include col-padding();
+            @include size(8);
+            @include size-md(12);
+
+            padding: 85px 0;
+
+            text-align: center;
+
+            border-right: $base-border;
+            @include md(border-right, none);
+        }
+
+        .card__col-4 {
+            @include col-padding();
+            @include size(4);
+            @include size-md(12);
+
+            padding: 16px 0 30px 44px;
+        }
+    }
+
+    &__descr {
+        padding-bottom: 25px;
+        border-bottom: $base-border;
+
+        p {
+            margin-bottom: 8px;
+
+            font-size: 13px;
+            line-height: 22px;
+
+            color: #666666;
+        }
+    }
+
+    &__btn-inner {
+        padding: 30px 0 30px 0;
+        text-align: center;
+        border-bottom: $base-border;
+    }
+
+    &__base-button {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    &__waranty {
+        font-size: 12px;
+        line-height: 16px;
+
+        color: #555555;
+    }
+
+    &-desc {
+        padding-top: 25px;
+
+        &__title {
+            margin-bottom: 12px;
+            line-height: 24px;
+
+            color: #333333;
+        }
+
+        &__text {
+            margin-bottom: 4px;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #777777;
+        }
+
+        span {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: inherit;
+
+            color: #333333;
+        }
     }
 }
