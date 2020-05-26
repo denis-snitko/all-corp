@@ -1,5 +1,5 @@
 import $ from "jquery";
-import 'owl.carousel2';
+import 'owl.carousel';
 
 $(document).ready(function () {
     $(".reviews-slider").owlCarousel({
