@@ -1,5 +1,6 @@
 .page-product {
     padding-bottom: 180px;
+    @include md(padding-bottom, 60px);
     background-color: #f3f3f3;
 
     .page-product-card {
@@ -23,23 +24,8 @@
 
     .page-product-advantages {
         margin-bottom: 56px;
-        &__row {
-            @include row-flex();
-        }
 
-        &__col-9 {
-            @include col();
-            @include size(9);
-            @include size-md(12);
-            border: $base-border;
-        }
-
-        &__col-3 {
-            @include col();
-            @include size(3);
-            @include md(display, none);
-            border: $base-border;
-        }
+        border: $base-border;
 
         .advantages-row {
             padding: 68px 54px;
@@ -75,38 +61,12 @@
         }
     }
 
-    .page-product-aside {
-        &__img {
-            padding: 35px 10px 35px 30px;
-        }
-
-        &__desc {
-            padding: 20px 10px 20px 30px;
-
-            font-size: 14px;
-            line-height: 24px;
-
-            color: #666666;
-
-            border-top: $base-border;
-        }
-
-        &__link {
-            display: block;
-            padding-left: 30px;
-            padding-bottom: 10px;
-
-            color: $base-blue-color;
-        }
-    }
-
     .page-product-tabs {
         @include row-flex();
 
         .tabs {
             margin-bottom: 40px;
             @include col();
-            @include size(9);
             @include size-md(12);
 
             &__title {
@@ -153,6 +113,7 @@
 
             &__row {
                 display: none;
+                padding: 0 30px;
                 line-height: 24px;
 
                 p {
@@ -173,13 +134,88 @@
     .page-product-sale {
         @include row-flex();
         margin-bottom: 50px;
-        
+
         &__col {
             @include col();
-            @include size(9);
             @include size-md(12);
             padding-bottom: 50px;
             border-bottom: $base-border;
+        }
+    }
+
+    .procuct-page-suggestion {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-bottom: $base-border;
+    }
+
+    .product-page-pagination {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include sm(justify-content, center);
+        padding-top: 46px;
+
+        &__link {
+            display: inline-block;
+            margin-bottom: 20px;
+            border: $base-border;
+            border-radius: 3px;
+
+            &:hover .link__text {
+                color: $base-blue-color;
+            }
+        }
+
+        .link__inner {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                display: block;
+                width: 45px;
+                height: 45px;
+                background: url("../img/svg/arrow-left.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .link__inner--share {
+
+            &::before {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                background: url("../img/svg/share.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .link__arrow {
+            display: inline-block;
+            width: 46px;
+        }
+
+        .link__text {
+            display: inline-block;
+            padding: 12px 20px;
+            line-height: 24px;
+
+            color: #222222;
+
+            border-left: $base-border;
+            
+            transition: $base-transition;
+            
+            &--share {
+                border-left: none;
+                border-right: $base-border;
+                
+            }
         }
     }
 }

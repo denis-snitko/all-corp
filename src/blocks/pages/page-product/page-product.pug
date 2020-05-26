@@ -39,31 +39,22 @@ section.page-product
                             a(href="#") Все характеристики
 
             .page-product-advantages
-
-                .page-product-advantages__row
-                    .page-product-advantages__col-9
-                        .advantages-row
-                            .advantages-row__col
-                                .advantages-row-item
-                                    img.advantages-row-item__img(src="./img/icons/adv-item-1.png" alt="1")
-                                    .advantages-row-item__title Оптимальный выбор
-                                    .advantages-row-item__desc Низкие цены и широкий ассортимент
-                            .advantages-row__col
-                                .advantages-row-item
-                                    img.advantages-row-item__img(src="./img/icons/adv-item-2.png" alt="2")
-                                    .advantages-row-item__title Всегда рядом
-                                    .advantages-row-item__desc Широкая сеть представительств
-                            .advantages-row__col
-                                .advantages-row-item
-                                    img.advantages-row-item__img(src="./img/icons/adv-item-3.png" alt="3")
-                                    .advantages-row-item__title Доставка в срок
-                                    .advantages-row-item__desc Оперативная доставка и выгрузка товара
-                    .page-product-advantages__col-3
-                        .page-product-aside
-                            img.page-product-aside__img(src="./img/brands/brand-6.png" alt="")
-                            p.page-product-aside__desc Профессиональное оборудование для медицинских центров
-                            a.page-product-aside__link(href="#") Все товары категории
-                            a.page-product-aside__link(href="#") Все товары бренда
+                .advantages-row
+                    .advantages-row__col
+                        .advantages-row-item
+                            img.advantages-row-item__img(src="./img/icons/adv-item-1.png" alt="1")
+                            .advantages-row-item__title Оптимальный выбор
+                            .advantages-row-item__desc Низкие цены и широкий ассортимент
+                    .advantages-row__col
+                        .advantages-row-item
+                            img.advantages-row-item__img(src="./img/icons/adv-item-2.png" alt="2")
+                            .advantages-row-item__title Всегда рядом
+                            .advantages-row-item__desc Широкая сеть представительств
+                    .advantages-row__col
+                        .advantages-row-item
+                            img.advantages-row-item__img(src="./img/icons/adv-item-3.png" alt="3")
+                            .advantages-row-item__title Доставка в срок
+                            .advantages-row-item__desc Оперативная доставка и выгрузка товара
 
             .page-product-tabs
                 .tabs.product-card__tabs
@@ -92,4 +83,114 @@ section.page-product
                 .page-product-sale__col
                     include ../../components/sale/sale.pug
 
-            
+            .procuct-page-suggestion
+                .procuct-page-suggestion__col
+                    h2.suggestion__title Вам может понравиться
+                    .owl-carousel.owl.theme.products-row.owl-suggestion
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-1.jpg" alt="")
+                                .product-card__text-inner    
+                                    h3.product-card__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    a.product-card__category(href="#") Косметология
+                                    a.base-button.product-card__button(href="./page-product.html") Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-2.jpg" alt="")
+                                .product-card__text-inner
+                                    h3.product-card__title Электрическая печь Nyman 2000
+                                    a.product-card__category(href="#") Печи, камины, дымоходы
+                                    button.base-button.product-card__button Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-3.jpg" alt="")
+                                .product-card__text-inner
+                                    h3.product-card__title Помпа дренажная SAUERMANN
+                                    a.product-card__category(href="#") Комплектующие
+                                    button.base-button.product-card__button Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-1.jpg" alt="")
+                                .product-card__text-inner
+                                    h3.product-card__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    a.product-card__category(href="#") Косметология
+                                    button.base-button.product-card__button Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-1.jpg" alt="")
+                                .product-card__text-inner    
+                                    h3.product-card__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    a.product-card__category(href="#") Косметология
+                                    button.base-button.product-card__button Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+                        .products-row__item
+                            .product-card
+                                img.product-card__img(src="./img/products/product-2.jpg" alt="")
+                                .product-card__text-inner
+                                    h3.product-card__title Электрическая печь Nyman 2000
+                                    a.product-card__category(href="#") Печи, камины, дымоходы
+                                    button.base-button.product-card__button Узнать цену
+                                .product-card__desc
+                                    h3.desc__title Аппарат для лазерной эпиляции Cynosure Apogee+
+                                    p.desc__text.desc__text--art Артикул 234151
+                                    p.desc__text Масса, кг
+                                    span 86
+                                    p.desc__text Размер, см х см
+                                    span 90 см x 45 см x 60 см
+                                    p.desc__text Размещение
+                                    span напольный
+
+            .product-page-pagination
+                a.product-page-pagination__link(href="")
+                    .link__inner
+                        span.link__arrow 
+                        span.link__text Назад к списку
+                a.product-page-pagination__link.product-page-pagination__link--share(href="")
+                    .link__inner.link__inner--share
+                        span.link__text.link__text--share Поделиться
+                        span.link__arrow.link__arrow--share 
+

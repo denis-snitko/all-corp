@@ -817,33 +817,7 @@ img {
   color: #0081c2
 }
 .page-product .page-product-advantages {
-  margin-bottom: 56px
-}
-.page-product .page-product-advantages__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px
-}
-.page-product .page-product-advantages__col-9 {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(75% - 30px);
-  border: 1px solid #f2f2f2
-}
-.page-product .page-product-advantages__col-3 {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(25% - 30px);
+  margin-bottom: 56px;
   border: 1px solid #f2f2f2
 }
 .page-product .page-product-advantages .advantages-row {
@@ -876,22 +850,6 @@ img {
   line-height: 20px;
   color: #666
 }
-.page-product .page-product-aside__img {
-  padding: 35px 10px 35px 30px
-}
-.page-product .page-product-aside__desc {
-  padding: 20px 10px 20px 30px;
-  font-size: 14px;
-  line-height: 24px;
-  color: #666;
-  border-top: 1px solid #f2f2f2
-}
-.page-product .page-product-aside__link {
-  display: block;
-  padding-left: 30px;
-  padding-bottom: 10px;
-  color: #08c
-}
 .page-product .page-product-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -907,8 +865,7 @@ img {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
-  margin-right: 15px;
-  width: calc(75% - 30px)
+  margin-right: 15px
 }
 .page-product .page-product-tabs .tabs__title {
   margin-bottom: 40px;
@@ -946,6 +903,7 @@ img {
 }
 .page-product .page-product-tabs .tabs__row {
   display: none;
+  padding: 0 30px;
   line-height: 24px
 }
 .page-product .page-product-tabs .tabs__row p {
@@ -973,9 +931,69 @@ img {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
-  width: calc(75% - 30px);
   padding-bottom: 50px;
   border-bottom: 1px solid #f2f2f2
+}
+.page-product .procuct-page-suggestion {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f2f2f2
+}
+.page-product .product-page-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 46px
+}
+.page-product .product-page-pagination__link {
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px
+}
+.page-product .product-page-pagination__link:hover .link__text {
+  color: #08c
+}
+.page-product .product-page-pagination .link__inner {
+  position: relative
+}
+.page-product .product-page-pagination .link__inner::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: url(../img/svg/arrow-left.svg) center no-repeat
+}
+.page-product .product-page-pagination .link__inner--share::before {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: url(../img/svg/share.svg) center no-repeat
+}
+.page-product .product-page-pagination .link__arrow {
+  display: inline-block;
+  width: 46px
+}
+.page-product .product-page-pagination .link__text {
+  display: inline-block;
+  padding: 12px 20px;
+  line-height: 24px;
+  color: #222;
+  border-left: 1px solid #f2f2f2;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out
+}
+.page-product .product-page-pagination .link__text--share {
+  border-left: none;
+  border-right: 1px solid #f2f2f2
 }
 .card__row {
   display: -webkit-box;
@@ -1369,24 +1387,24 @@ img {
 .products-row__item:hover .product-card {
   border: 1px solid #fff
 }
-.products .product-card {
+.product-card {
   position: relative;
   padding: 22px 28px;
   text-align: center;
   border: 1px solid #f5f5f5;
   overflow: hidden
 }
-.products .product-card:hover .product-card__desc {
+.product-card:hover .product-card__desc {
   top: 0
 }
-.products .product-card__img {
+.product-card__img {
   display: inline-block;
   max-width: 212px;
   height: 212px;
   margin-bottom: 15px;
   text-align: center
 }
-.products .product-card__text-inner {
+.product-card__text-inner {
   min-height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1402,24 +1420,24 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between
 }
-.products .product-card__title {
+.product-card__title {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500
 }
-.products .product-card__category {
+.product-card__category {
   font-size: 12px;
   color: #777
 }
-.products .product-card__category:hover {
+.product-card__category:hover {
   color: #08c
 }
-.products .product-card__button {
+.product-card__button {
   width: 100%;
   padding: 10px 18px
 }
-.products .product-card__desc {
+.product-card__desc {
   position: absolute;
   top: -100%;
   left: 0;
@@ -1432,7 +1450,7 @@ img {
   -o-transition: .3s linear;
   transition: .3s linear
 }
-.products .product-card__desc .desc__title {
+.product-card__desc .desc__title {
   margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
@@ -1440,16 +1458,16 @@ img {
   text-align: center;
   color: #08c
 }
-.products .product-card__desc .desc__text {
+.product-card__desc .desc__text {
   font-size: 12px;
   line-height: 18px;
   color: #999
 }
-.products .product-card__desc .desc__text--art {
+.product-card__desc .desc__text--art {
   margin-bottom: 15px;
   text-align: center
 }
-.products .product-card__desc span {
+.product-card__desc span {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 12px;
@@ -2313,11 +2331,8 @@ img {
   }
 }
 @media screen and (max-width:768px) {
-  .page-product .page-product-advantages__col-9 {
-    width: calc(100% - 30px)
-  }
-  .page-product .page-product-advantages__col-3 {
-    display: none
+  .page-product {
+    padding-bottom: 60px
   }
   .page-product .page-product-advantages .advantages-row {
     padding-top: 34px;
@@ -2436,6 +2451,11 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column
+  }
+  .page-product .product-page-pagination {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
   }
   .services {
     padding-bottom: 40px
