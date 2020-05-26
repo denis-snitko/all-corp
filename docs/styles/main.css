@@ -816,6 +816,9 @@ img {
 .page-product .page-product-card a:hover {
   color: #0081c2
 }
+.page-product .page-product-advantages {
+  margin-bottom: 56px
+}
 .page-product .page-product-advantages__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,6 +891,91 @@ img {
   padding-left: 30px;
   padding-bottom: 10px;
   color: #08c
+}
+.page-product .page-product-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px
+}
+.page-product .page-product-tabs .tabs {
+  margin-bottom: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(75% - 30px)
+}
+.page-product .page-product-tabs .tabs__title {
+  margin-bottom: 40px;
+  background-color: #f9f9fa
+}
+.page-product .page-product-tabs .tabs__title-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #f2f2f2
+}
+.page-product .page-product-tabs .tabs__title-item {
+  display: inline-block;
+  padding: 15px 24px;
+  line-height: 21px;
+  border-right: 1px solid #f2f2f2;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out
+}
+.page-product .page-product-tabs .tabs__title-item:last-child {
+  border-right: none
+}
+.page-product .page-product-tabs .tabs__title-item:hover {
+  color: #08c;
+  background-color: #fff;
+  cursor: pointer
+}
+.page-product .page-product-tabs .tabs__title-item--active {
+  color: #08c;
+  background-color: #fff
+}
+.page-product .page-product-tabs .tabs__title-item--active:hover {
+  cursor: default
+}
+.page-product .page-product-tabs .tabs__row {
+  display: none;
+  line-height: 24px
+}
+.page-product .page-product-tabs .tabs__row p {
+  margin-bottom: 24px
+}
+.page-product .page-product-tabs .tabs__row p:last-child {
+  margin-bottom: 0
+}
+.page-product .page-product-tabs .active {
+  display: block
+}
+.page-product .page-product-sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 50px
+}
+.page-product .page-product-sale__col {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(75% - 30px);
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f2f2f2
 }
 .card__row {
   display: -webkit-box;
@@ -2060,6 +2148,38 @@ img {
   background-color: #333;
   border: 1px solid #333
 }
+.sale {
+  position: relative;
+  padding: 30px 30px 30px 90px;
+  background-color: #f7f7f7
+}
+.sale::before {
+  position: absolute;
+  left: 25px;
+  content: "";
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url(../img/icons/sale.png);
+  background-repeat: no-repeat;
+  background-position: center
+}
+.sale__title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222
+}
+.sale__desc {
+  margin-bottom: 2px;
+  font-size: 13px;
+  line-height: 22px
+}
+.sale__date {
+  font-size: 12px;
+  line-height: 22px;
+  color: #888
+}
 @media (max-width:1200px) {
   .top-header__slogan {
     display: none
@@ -2209,8 +2329,12 @@ img {
   .page-product .page-product-advantages .advantages-row-item {
     margin-bottom: 30px
   }
+  .card__row .card__col-8,
+  .page-product .page-product-sale__col,
+  .page-product .page-product-tabs .tabs {
+    width: calc(100% - 30px)
+  }
   .card__row .card__col-8 {
-    width: calc(100% - 30px);
     border-right: none
   }
   .card__row .card__col-4 {
@@ -2304,6 +2428,15 @@ img {
     -ms-grid-column-span: 1;
     grid-area: 5/1/6/2
   }
+  .page-product .page-product-tabs .tabs__title {
+    margin-bottom: 20px
+  }
+  .page-product .page-product-tabs .tabs__title-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
   .services {
     padding-bottom: 40px
   }
@@ -2356,6 +2489,16 @@ img {
   }
   .footer .footer-form__input {
     width: 265px
+  }
+  .sale {
+    padding-left: 25px
+  }
+  .sale::before {
+    left: auto;
+    right: 20px
+  }
+  .sale__title {
+    padding-right: 20px
   }
 }
 @media (max-width:435px) {

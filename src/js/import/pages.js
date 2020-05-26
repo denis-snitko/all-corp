@@ -1,1 +1,1 @@
-// import "../../blocks/pages/page-content/page-content";
+import "../../blocks/pages/page-product/page-product";

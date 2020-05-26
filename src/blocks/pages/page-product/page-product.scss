@@ -22,6 +22,7 @@
     }
 
     .page-product-advantages {
+        margin-bottom: 56px;
         &__row {
             @include row-flex();
         }
@@ -81,10 +82,10 @@
 
         &__desc {
             padding: 20px 10px 20px 30px;
-            
+
             font-size: 14px;
             line-height: 24px;
-            
+
             color: #666666;
 
             border-top: $base-border;
@@ -96,6 +97,89 @@
             padding-bottom: 10px;
 
             color: $base-blue-color;
+        }
+    }
+
+    .page-product-tabs {
+        @include row-flex();
+
+        .tabs {
+            margin-bottom: 40px;
+            @include col();
+            @include size(9);
+            @include size-md(12);
+
+            &__title {
+                margin-bottom: 40px;
+                @include sm(margin-bottom, 20px);
+
+                background-color: #f9f9fa;
+            }
+            &__title-list {
+                display: flex;
+                @include sm(flex-direction, column);
+
+                border: $base-border;
+            }
+            &__title-item {
+                display: inline-block;
+                padding: 15px 24px;
+
+                line-height: 21px;
+
+                border-right: $base-border;
+
+                transition: $base-transition;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                &:hover {
+                    color: $base-blue-color;
+                    background-color: #ffffff;
+                    cursor: pointer;
+                }
+
+                &--active {
+                    color: $base-blue-color;
+                    background-color: #ffffff;
+
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+            }
+
+            &__row {
+                display: none;
+                line-height: 24px;
+
+                p {
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .active {
+            display: block;
+        }
+    }
+
+    .page-product-sale {
+        @include row-flex();
+        margin-bottom: 50px;
+        
+        &__col {
+            @include col();
+            @include size(9);
+            @include size-md(12);
+            padding-bottom: 50px;
+            border-bottom: $base-border;
         }
     }
 }
