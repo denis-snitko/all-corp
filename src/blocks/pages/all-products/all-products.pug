@@ -8,15 +8,26 @@ section.all-products
                 ul.bread-crumbs__list
                     li.bread-crumbs__item
                         a.bread-crumbs__link(href='./index.html') Главная
-                    li.bread-crumbs__item
-                        a.bread-crumbs__link(href='./index.html') Продукты
-                    li.bread-crumbs__item
-                        a.bread-crumbs__link(href='./index.html') Медицинское оборудование
-                    li.bread-crumbs__item Косметология
+                    li.bread-crumbs__item Продукты
 
     .container
         .all-products__row
-            .all-products__col-3 33333333
+            .all-products__col-3
+                .all-products__aside
+                    include ../../modules/aside-menu/aside-menu.pug
+                    img.aside__banner(src="./img/banners/aside-banner-1.jpg" alt="")
+                    .aside-advantages
+                        .aside-advantages__item
+                            img.aside-advantages__img(src="./img/icons/adv-item-1.png" alt="1")
+                            .aside-advantages__title Оптимальный выбор
+                            .aside-advantages__desc Низкие цены и широкий ассортимент
+                        .aside-advantages__item
+                            img.aside-advantages__img(src="./img/icons/adv-item-2.png" alt="2")
+                            .aside-advantages__title Всегда рядом
+                            .aside-advantages__desc Широкая сеть представительств
+                    .aside-text 
+                        p Цель нашей компании — предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.
+
             .all-products__col-9
                 .content-wrapper
                     .all-products-content
