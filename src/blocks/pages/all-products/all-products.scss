@@ -1,0 +1,105 @@
+// All-products
+.all-products {
+    padding-bottom: 180px;
+    @include lg(padding-bottom, 90px);
+
+    .all-products__row {
+        @include row-flex();
+
+        .all-products__col-3 {
+            padding-top: 43px;
+            @include col();
+            @include size(3);
+            @include lg(display, none);
+        }
+
+        .all-products__col-9 {
+            @include col();
+            @include size(9);
+            @include size-lg(12);
+        }
+    }
+
+    //all-products-content
+
+    .all-products-content {
+        margin-bottom: 23px;
+
+        &__text {
+            line-height: 24px;
+
+            p {
+                margin-bottom: 22px;
+            }
+        }
+
+        &__list {
+            @include row-flex();
+            justify-content: space-between;
+        }
+
+        &__list-item {
+            @include col();
+            @include size(6);
+            @include size-lg(12);
+            @include lg-block() {
+                margin-bottom: 15px;
+                padding: 20px;
+                border: $base-border;
+            }
+        }
+    }
+
+    // list-item
+    .list-item {
+        display: flex;
+
+        @include sm(flex-direction, column);
+
+        padding-bottom: 45px;
+        &__img {
+            width: 80px;
+            height: 80px;
+            margin-right: 30px;
+            @include sm-block() {
+                margin: 0 auto 15px auto;
+            }
+        }
+
+        &__title {
+            margin-bottom: 4px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 21px;
+            @include sm-block() {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+
+        &__links {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__link {
+            margin-right: 8px;
+            font-size: 12px;
+            line-height: 20px;
+
+            color: $base-blue-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__desc {
+            margin-top: 4px;
+            font-size: 13px;
+            line-height: 18px;
+
+            color: #666666;
+        }
+    }
+}
