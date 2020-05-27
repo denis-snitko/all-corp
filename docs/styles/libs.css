@@ -240,6 +240,7 @@
 .owl-carousel .owl-stage {
   position: relative;
   -ms-touch-action: pan-Y;
+  touch-action: manipulation;
   -moz-backface-visibility: hidden
 }
 .owl-carousel .owl-stage:after {
@@ -284,11 +285,19 @@
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-nav .owl-prev {
   cursor: pointer;
-  cursor: hand;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0!important;
+  font: inherit
 }
 .owl-carousel.owl-loaded {
   display: block
@@ -304,6 +313,8 @@
   visibility: hidden
 }
 .owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -365,6 +376,10 @@
   -webkit-transition: opacity .4s;
   -o-transition: opacity .4s;
   transition: opacity .4s
+}
+.owl-carousel .owl-item .owl-lazy:not([src]),
+.owl-carousel .owl-item .owl-lazy[src^=""] {
+  max-height: 0
 }
 .owl-carousel .owl-item img.owl-lazy {
   -webkit-transform-style: preserve-3d;

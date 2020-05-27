@@ -1,0 +1,12 @@
+// Page-category
+.page-category {
+    &__title {
+        padding-bottom: 21px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 28px;
+
+        color: #222222;
+        border-bottom: 2px solid $base-blue-color;
+    }
+}

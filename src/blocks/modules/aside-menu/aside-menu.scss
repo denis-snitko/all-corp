@@ -20,7 +20,7 @@
         transition: $base-transition;
 
         &::after {
-            content: url('../img/svg/arrow-right-aside.svg');
+            content: url("../img/svg/arrow-right-aside.svg");
             position: absolute;
             top: 20px;
             right: 20px;
@@ -33,4 +33,37 @@
             color: $base-blue-color;
         }
     }
+
+    .sub-menu {
+        padding: 16px 20px;
+        &__item {
+            margin-bottom: 6px;
+        }
+
+        &__link {
+            font-size: 12px;
+            line-height: 20px;
+
+            color: #555555;
+            transition: $base-transition;
+
+            &:hover {
+                color: $base-blue-color;
+            }
+        }
+    }
+
+    .active {
+        background-color: $base-blue-color;
+        color: #ffffff;
+
+        &::after {
+            content: url("../img/svg/arrow-down-white.svg");
+            top: 15px;
+            width: 11px;
+            height: 6px;
+        }
+    }
 }
+
+
