@@ -204,7 +204,58 @@
                   <li class="aside-menu__item"><a class="aside-menu__link" href="">Системы вентиляции</a></li>
                   <li class="aside-menu__item"><a class="aside-menu__link" href="">Стройматериалы</a></li>
                   <li class="aside-menu__item"><a class="aside-menu__link" href="">Дизайнерская мебель</a></li>
-                </ul><img class="aside__banner" src="./img/banners/aside-banner-1.jpg" alt="">
+                </ul>
+                <div class="aside__filter">
+                  <!-- Filter-->
+                  <form action="" method="get">
+                    <div class="filter">
+                      <div class="filter__title">Фильтр по параметрам</div>
+                      <div class="filter__item">Статус
+                        <div class="filter__checkbox filter__checkbox--tick">
+                          <input type="checkbox" id="checkbox-1" name="true">
+                          <label for="checkbox-1">В наличии</label>
+                        </div>
+                      </div>
+                      <div class="filter__item">Цена
+                        <div class="filter__input-price">
+                          <p>
+                            <input type="number" name="min" value="0"><span>&nbsp;&mdash;</span>
+                            <input type="number" name="max" value="1000">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="filter__item">Производитель</div>
+                      <div class="filter__item">Производство
+                        <div class="filter__radio">
+                          <input name="country" value="all" type="radio" id="radio-1" checked>
+                          <label for="radio-1">Все</label>
+                        </div>
+                        <div class="filter__radio">
+                          <input name="country" value="usa" type="radio" id="radio-2">
+                          <label for="radio-2">США</label>
+                        </div>
+                      </div>
+                      <div class="filter__item">Размер, см х см
+                        <div class="filter__checkbox">
+                          <input type="checkbox" id="checkbox-2" name="size" value="25 см x 15 см x 35 см">
+                          <label for="checkbox-2">25 см x 15 см x 35 см</label>
+                        </div>
+                        <div class="filter__checkbox">
+                          <input type="checkbox" id="checkbox-3" name="size" value="90 см x 45 см x 60 см">
+                          <label for="checkbox-3">90 см x 45 см x 60 см</label>
+                        </div>
+                        <div class="filter__checkbox">
+                          <input type="checkbox" id="checkbox-4" name="size" value="95 см x 50 см x 65 см">
+                          <label for="checkbox-4">95 см x 50 см x 65 см</label>
+                        </div>
+                      </div>
+                      <div class="filter__btn-inner">
+                        <button class="base-button second-button" type="submit">Показать</button>
+                        <button class="base-button" type="reset">Сбросить</button>
+                      </div>
+                    </div>
+                  </form>
+                </div><img class="aside__banner" src="./img/banners/aside-banner-1.jpg" alt="">
                 <div class="aside-advantages">
                   <div class="aside-advantages__item"><img class="aside-advantages__img" src="./img/icons/adv-item-1.png" alt="1">
                     <div class="aside-advantages__title">Оптимальный выбор</div>
@@ -222,7 +273,17 @@
             </div>
             <div class="page-cosmetology__col-9">
               <div class="content-wrapper">
-                <h2 class="page-category__title">Техника и мебель для учреждений здравоохранения разного уровня.</h2>ТУТ Сортировка и кнопки
+                <h2 class="page-category__title">Техника и мебель для учреждений здравоохранения разного уровня.</h2>
+                <div class="sort-filter">
+                  <form action="" method="">
+                    <select name="sort-filter">
+                      <option value="">По названию (А - Я)</option>
+                      <option value="">По названию (Я - А)</option>
+                      <option value="">По цене (возрастание) </option>
+                      <option value="">По цене (убывание) </option>
+                    </select>
+                  </form>
+                </div>
                 <div class="cosmetology-row">
                   <div class="cosmetology-row__item">
                     <div class="product-card"><img class="product-card__img" src="./img/products/product-1.jpg" alt="">

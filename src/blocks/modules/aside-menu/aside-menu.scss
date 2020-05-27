@@ -36,6 +36,8 @@
 
     .sub-menu {
         padding: 16px 20px;
+        background-color: #fbfbfb;
+        
         &__item {
             margin-bottom: 6px;
         }
@@ -50,7 +52,7 @@
             &:hover {
                 color: $base-blue-color;
             }
-            
+
             &--active {
                 color: $base-blue-color;
             }
@@ -69,5 +71,3 @@
         }
     }
 }
-
-

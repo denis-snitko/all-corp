@@ -1,0 +1,35 @@
+// Filter
+form(action="" method="get")
+    .filter
+        .filter__title Фильтр по параметрам
+        .filter__item Статус
+            .filter__checkbox.filter__checkbox--tick
+                input(type="checkbox" id="checkbox-1" name="true")
+                label(for="checkbox-1") В наличии
+        .filter__item Цена
+            .filter__input-price
+                p
+                    input(type="number" name="min" value="0")
+                    span &nbsp;&mdash;
+                    input(type="number" name="max" value="1000")
+        .filter__item Производитель
+        .filter__item Производство
+            .filter__radio
+                input(name="country" value="all" type="radio" id="radio-1" checked)
+                label(for="radio-1") Все
+            .filter__radio
+                input(name="country" value="usa" type="radio" id="radio-2")
+                label(for="radio-2") США
+        .filter__item Размер, см х см
+            .filter__checkbox
+                input(type="checkbox" id="checkbox-2" name="size" value="25 см x 15 см x 35 см")
+                label(for="checkbox-2") 25 см x 15 см x 35 см
+            .filter__checkbox
+                input(type="checkbox" id="checkbox-3" name="size" value="90 см x 45 см x 60 см")
+                label(for="checkbox-3") 90 см x 45 см x 60 см
+            .filter__checkbox
+                input(type="checkbox" id="checkbox-4" name="size" value="95 см x 50 см x 65 см")
+                label(for="checkbox-4") 95 см x 50 см x 65 см
+        .filter__btn-inner
+            button(type="submit").base-button.second-button Показать
+            button(type="reset").base-button Сбросить

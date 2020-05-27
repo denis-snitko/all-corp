@@ -349,10 +349,26 @@ img {
   -webkit-box-shadow: 0 0 27px rgba(0,0,0,.1);
   box-shadow: 0 0 27px rgba(0,0,0,.1)
 }
+.sort-filter {
+  margin-bottom: 25px
+}
+.sort-filter select {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #777;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  outline: 0;
+  cursor: pointer
+}
+.aside__filter {
+  margin-bottom: 35px
+}
 .all-products,
 .page-category,
 .page-cosmetology {
-  padding-bottom: 180px
+  padding-bottom: 180px;
+  background-color: #f3f3f3
 }
 .all-products .content-wrapper,
 .page-category .content-wrapper,
@@ -632,7 +648,8 @@ img {
   color: #08c
 }
 .aside-menu .sub-menu {
-  padding: 16px 20px
+  padding: 16px 20px;
+  background-color: #fbfbfb
 }
 .aside-menu .sub-menu__item {
   margin-bottom: 6px
@@ -2114,6 +2131,151 @@ img {
   color: #fff;
   background-color: #e52929;
   border-radius: 2px
+}
+.filter {
+  padding: 15px 0;
+  background-color: #fbfbfb
+}
+.filter__title {
+  padding-left: 19px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #333;
+  border-bottom: 1px solid #f2f2f2
+}
+.filter__item {
+  padding: 14px 18px 21px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  border-bottom: 1px solid #f2f2f2
+}
+.filter__btn-inner {
+  padding-top: 21px;
+  text-align: center
+}
+.filter__btn-inner > button {
+  margin-right: 12px
+}
+.filter__btn-inner > button:last-child {
+  margin-right: 0
+}
+.filter__checkbox {
+  position: relative
+}
+.filter__checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+.filter__checkbox label {
+  padding-left: 25px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #333;
+  cursor: pointer
+}
+.filter__checkbox label:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out
+}
+.filter__checkbox label:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/svg/check.svg) no-repeat;
+  background-size: 12px 12px;
+  opacity: 1;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  z-index: 2;
+  -webkit-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  transition: opacity .1s linear
+}
+.filter__checkbox input:checked + label:before {
+  border-color: #08c;
+  background-color: #08c
+}
+.filter__radio {
+  position: relative
+}
+.filter__radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+.filter__radio label {
+  padding-left: 25px;
+  color: #333;
+  cursor: pointer
+}
+.filter__radio label:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: border .1s linear;
+  -o-transition: border .1s linear;
+  transition: border .1s linear
+}
+.filter__radio label:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  z-index: 2;
+  -webkit-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  transition: opacity .1s linear
+}
+.filter__radio input:checked + label:before {
+  border-color: #08c;
+  background-color: #08c
+}
+.filter__radio input:checked + label:after {
+  opacity: 1
+}
+.filter__input-price input {
+  padding: 0 5px;
+  width: 100px;
+  height: 38px;
+  border: 1px solid #c9d3da;
+  outline: 0
+}
+.filter__input-price span {
+  padding: 0 5px;
+  color: #c9d3da
 }
 @media (max-width:1200px) {
   .top-header__slogan {

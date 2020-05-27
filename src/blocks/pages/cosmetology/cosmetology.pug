@@ -44,6 +44,9 @@ section.page-cosmetology
                             a.aside-menu__link(href="") Стройматериалы
                         li.aside-menu__item
                             a.aside-menu__link(href="") Дизайнерская мебель
+                    
+                    .aside__filter
+                        include ../../components/filter/filter.pug
 
                     img.aside__banner(src="./img/banners/aside-banner-1.jpg" alt="")
                     .aside-advantages
@@ -61,7 +64,14 @@ section.page-cosmetology
             .page-cosmetology__col-9
                 .content-wrapper
                     h2.page-category__title Техника и мебель для учреждений здравоохранения разного уровня.
-                    | ТУТ Сортировка и кнопки
+                    .sort-filter
+                        form(action="" method="")
+                            select(name="sort-filter")
+                                option(value="") По названию (А - Я)
+                                option(value="") По названию (Я - А)
+                                option(value="") По цене (возрастание) 
+                                option(value="") По цене (убывание) 
+
                     .cosmetology-row
                         .cosmetology-row__item
                             .product-card
