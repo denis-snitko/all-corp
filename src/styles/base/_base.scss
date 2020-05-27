@@ -112,7 +112,10 @@ img {
     display: inline-block;
 }
 
-
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    background-color: $base-blue-color;
+}
 
 .section-link {
     position: absolute;
@@ -212,6 +215,7 @@ img {
     background-color: $base-blue-color;
 
     &__title {
+        @include lg(margin-top, 65px);
         margin-bottom: 19px;
         font-weight: 400;
         font-size: 31px;

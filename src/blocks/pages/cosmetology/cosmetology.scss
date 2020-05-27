@@ -1,0 +1,14 @@
+// Cosmetology
+.cosmetology {
+    &-row {
+        @include row-flex();
+        margin-bottom: 38px;
+
+        &__item {
+            @include col();
+            @include size(4);
+            @include size-sm(12);
+            margin-bottom: 30px;
+        }
+    }
+}

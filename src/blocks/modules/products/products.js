@@ -2,7 +2,7 @@ import $ from "jquery";
 import 'owl.carousel';
 
 $(document).ready(function () {
-    $(".products-row").owlCarousel({
+    $(".owl-products").owlCarousel({
         loop: true,
         margin: 28,
         nav: true,

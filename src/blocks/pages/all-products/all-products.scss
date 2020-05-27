@@ -1,6 +1,7 @@
 // All-products
 .all-products,
-.page-category {
+.page-category,
+.page-cosmetology {
     padding-bottom: 180px;
     @include lg(padding-bottom, 90px);
 
@@ -9,11 +10,13 @@
     }
 
     .all-products__row,
-    .page-category__row {
+    .page-category__row,
+    .page-cosmetology__row {
         @include row-flex();
 
         .all-products__col-3,
-        .page-category__col-3 {
+        .page-category__col-3,
+        .page-cosmetology__col-3 {
             padding-top: 43px;
             @include col();
             @include size(3);
@@ -21,7 +24,8 @@
         }
 
         .all-products__col-9,
-        .page-category__col-9 {
+        .page-category__col-9,
+        .page-cosmetology__col-9 {
             @include col();
             @include size(9);
             @include size-lg(12);

@@ -5,69 +5,73 @@
 
     border-bottom: 1px solid #f2f2f2;
 
-    &-row {
-        .owl-prev,
-        .owl-next {
-            width: 33px;
-            height: 33px;
+   
+}
+
+.products-row {
+    .owl-prev,
+    .owl-next {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        top: -72px;
+
+        background-color: $base-blue-color;
+        border-radius: 50%;
+        transition: $base-transition;
+
+        &:after {
+            content: "";
             position: absolute;
-            top: -72px;
-
-            background-color: $base-blue-color;
-            border-radius: 50%;
-            transition: $base-transition;
-
-            &:after {
-                content: "";
-                position: absolute;
-                top: 9px;
-                right: 10px;
-                width: 16px;
-                height: 16px;
-                background-image: url("../img/icons/arrow-left.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            &:hover {
-                background-color: #009ce8;
-            }
-        }
-        .owl-prev {
-            right: 43px;
-            &:after {
-                background-image: url("../img/icons/arrow-left.svg");
-            }
-        }
-        .owl-next {
-            right: 0;
-            &:after {
-                right: 7px;
-                background-image: url("../img/icons/arrow-right.svg");
-            }
+            top: 9px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../img/icons/arrow-left.svg");
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
-        .owl-dot span {
-            width: 8px;
-            height: 8px;
-            background-color: #cad2d6;
+        &:hover {
+            background-color: #009ce8;
         }
-        .owl-dot.active span {
-            width: 8px;
-            height: 8px;
-            background-color: $base-blue-color;
+    }
+    .owl-prev {
+        right: 43px;
+        &:after {
+            background-image: url("../img/icons/arrow-left.svg");
         }
-        &__item {
-            margin: 30px 0;
-            transition: $base-transition;
+    }
+    .owl-next {
+        right: 0;
+        &:after {
+            right: 7px;
+            background-image: url("../img/icons/arrow-right.svg");
+        }
+    }
 
-            &:hover {
-                box-shadow: 0px 0px 25px #f2f2f2;
-            }
+    .owl-dot span {
+        width: 8px;
+        height: 8px;
+        background-color: #cad2d6;
+    }
 
-            &:hover .product-card {
-                border: 1px solid #ffffff;
-            }
+    .owl-dot.active span {
+        width: 8px;
+        height: 8px;
+        background-color: $base-blue-color;
+    }
+
+    &__item {
+        margin: 30px 0;
+        transition: $base-transition;
+
+        &:hover {
+            box-shadow: 0px 0px 25px #f2f2f2;
+        }
+
+        &:hover .product-card {
+            border: 1px solid #ffffff;
         }
     }
 }
@@ -111,10 +115,6 @@
     &__category {
         font-size: 12px;
         color: #777777;
-
-        &:hover {
-            color: $base-blue-color;
-        }
     }
 
     &__button {
