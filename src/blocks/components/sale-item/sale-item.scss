@@ -1,0 +1,23 @@
+// Sale-item
+.sale-item {
+    
+    &::before {
+        content: "акция";
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        display: inline-block;
+        
+        padding: 4px 6px;
+
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #ffffff;
+
+        background-color: #e52929;
+        border-radius: 2px;
+    }
+}

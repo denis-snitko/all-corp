@@ -1,0 +1,23 @@
+// New-item
+.new-item {
+    
+    &::before {
+        content: "новинка";
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        display: inline-block;
+        
+        padding: 4px 6px;
+
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #ffffff;
+
+        background-color: #4fad00;
+        border-radius: 2px;
+    }
+}
