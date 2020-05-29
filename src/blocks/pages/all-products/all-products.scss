@@ -2,7 +2,8 @@
 .all-products,
 .page-category,
 .page-cosmetology,
-.page-articles {
+.page-articles,
+.catalog-menu {
     padding-bottom: 180px;
     @include lg(padding-bottom, 90px);
 
@@ -41,7 +42,8 @@
     // All-products-content
 
     .all-products-content,
-    .page-category {
+    .page-category,
+    .catalog-menu {
         margin-bottom: 23px;
 
         &__text {
@@ -66,6 +68,12 @@
                 padding: 20px;
                 border: $base-border;
             }
+        }
+    }
+    
+    .catalog-menu {
+        &__list-item {
+            @include size(3);
         }
     }
 
