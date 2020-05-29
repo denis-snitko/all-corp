@@ -1,0 +1,52 @@
+// Pagination
+.pagination {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    &__item {
+        margin: 0 6px;
+    }
+
+    &__link {
+        position: relative;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #666666;
+
+        border: $base-border;
+        border-radius: 4px;
+
+        transition: $base-transition;
+
+        &:hover {
+            color: #ffffff;
+            background-color: $base-blue-color;
+            border: 1px solid $base-blue-color;
+        }
+
+        &--active {
+            color: #ffffff;
+            background-color: $base-blue-color;
+            border: 1px solid $base-blue-color;
+        }
+
+        &--arrow {
+            svg {
+                position: absolute;
+                top: 7px;
+                right: 8px;
+                width: 8px;
+                height: 14px;
+                fill: #222222;
+            }
+
+            &:hover {
+                svg {
+                    fill: #ffffff;
+                }
+            }
+
+        }
+    }
+}

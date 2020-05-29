@@ -1123,7 +1123,7 @@ img {
 }
 .page-articles .content-wrapper {
   height: auto;
-  padding-bottom: 20px
+  padding-bottom: 40px
 }
 .page-articles .articles-item--big .articles-item__desc {
   margin-bottom: 23px
@@ -2448,6 +2448,48 @@ img {
 .filter__input-price span {
   padding: 0 5px;
   color: #c9d3da
+}
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.pagination__item {
+  margin: 0 6px
+}
+.pagination__link {
+  position: relative;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #666;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out
+}
+.pagination__link--active,
+.pagination__link:hover {
+  color: #fff;
+  background-color: #08c;
+  border: 1px solid #08c
+}
+.pagination__link--arrow svg {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 8px;
+  height: 14px;
+  fill: #222
+}
+.pagination__link--arrow:hover svg {
+  fill: #fff
 }
 @media (max-width:1200px) {
   .top-header__slogan {
