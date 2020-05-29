@@ -244,6 +244,53 @@ a {
   -ms-grid-column-span: 1;
   grid-area: 2/4/3/5
 }
+.page-articles .grid-container {
+  margin-bottom: 27px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr
+}
+.page-articles .item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/3/3
+}
+.page-articles .item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1/3/2/4
+}
+.page-articles .item-3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2/3/3/4
+}
+.page-articles .item-1--sort {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1/2/3/4
+}
+.page-articles .item-2--sort {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2
+}
+.page-articles .item-3--sort {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/3/2
+}
 img {
   display: block;
   width: 100%;
@@ -365,23 +412,32 @@ img {
   margin-bottom: 35px
 }
 .all-products,
+.page-articles,
 .page-category,
 .page-cosmetology {
   padding-bottom: 180px;
   background-color: #f3f3f3
 }
 .all-products .content-wrapper,
+.page-articles .content-wrapper,
 .page-category .content-wrapper,
 .page-cosmetology .content-wrapper {
   height: 100%
 }
 .all-products .all-products__row,
+.all-products .page-articles__row,
 .all-products .page-category__row,
 .all-products .page-cosmetology__row,
+.page-articles .all-products__row,
+.page-articles .page-articles__row,
+.page-articles .page-category__row,
+.page-articles .page-cosmetology__row,
 .page-category .all-products__row,
+.page-category .page-articles__row,
 .page-category .page-category__row,
 .page-category .page-cosmetology__row,
 .page-cosmetology .all-products__row,
+.page-cosmetology .page-articles__row,
 .page-cosmetology .page-category__row,
 .page-cosmetology .page-cosmetology__row {
   display: -webkit-box;
@@ -393,30 +449,67 @@ img {
   margin-right: -15px
 }
 .all-products .all-products__row .all-products__col-3,
+.all-products .all-products__row .page-articles__col-3,
 .all-products .all-products__row .page-category__col-3,
 .all-products .all-products__row .page-cosmetology__col-3,
+.all-products .page-articles__row .all-products__col-3,
+.all-products .page-articles__row .page-articles__col-3,
+.all-products .page-articles__row .page-category__col-3,
+.all-products .page-articles__row .page-cosmetology__col-3,
 .all-products .page-category__row .all-products__col-3,
+.all-products .page-category__row .page-articles__col-3,
 .all-products .page-category__row .page-category__col-3,
 .all-products .page-category__row .page-cosmetology__col-3,
 .all-products .page-cosmetology__row .all-products__col-3,
+.all-products .page-cosmetology__row .page-articles__col-3,
 .all-products .page-cosmetology__row .page-category__col-3,
 .all-products .page-cosmetology__row .page-cosmetology__col-3,
+.page-articles .all-products__row .all-products__col-3,
+.page-articles .all-products__row .page-articles__col-3,
+.page-articles .all-products__row .page-category__col-3,
+.page-articles .all-products__row .page-cosmetology__col-3,
+.page-articles .page-articles__row .all-products__col-3,
+.page-articles .page-articles__row .page-articles__col-3,
+.page-articles .page-articles__row .page-category__col-3,
+.page-articles .page-articles__row .page-cosmetology__col-3,
+.page-articles .page-category__row .all-products__col-3,
+.page-articles .page-category__row .page-articles__col-3,
+.page-articles .page-category__row .page-category__col-3,
+.page-articles .page-category__row .page-cosmetology__col-3,
+.page-articles .page-cosmetology__row .all-products__col-3,
+.page-articles .page-cosmetology__row .page-articles__col-3,
+.page-articles .page-cosmetology__row .page-category__col-3,
+.page-articles .page-cosmetology__row .page-cosmetology__col-3,
 .page-category .all-products__row .all-products__col-3,
+.page-category .all-products__row .page-articles__col-3,
 .page-category .all-products__row .page-category__col-3,
 .page-category .all-products__row .page-cosmetology__col-3,
+.page-category .page-articles__row .all-products__col-3,
+.page-category .page-articles__row .page-articles__col-3,
+.page-category .page-articles__row .page-category__col-3,
+.page-category .page-articles__row .page-cosmetology__col-3,
 .page-category .page-category__row .all-products__col-3,
+.page-category .page-category__row .page-articles__col-3,
 .page-category .page-category__row .page-category__col-3,
 .page-category .page-category__row .page-cosmetology__col-3,
 .page-category .page-cosmetology__row .all-products__col-3,
+.page-category .page-cosmetology__row .page-articles__col-3,
 .page-category .page-cosmetology__row .page-category__col-3,
 .page-category .page-cosmetology__row .page-cosmetology__col-3,
 .page-cosmetology .all-products__row .all-products__col-3,
+.page-cosmetology .all-products__row .page-articles__col-3,
 .page-cosmetology .all-products__row .page-category__col-3,
 .page-cosmetology .all-products__row .page-cosmetology__col-3,
+.page-cosmetology .page-articles__row .all-products__col-3,
+.page-cosmetology .page-articles__row .page-articles__col-3,
+.page-cosmetology .page-articles__row .page-category__col-3,
+.page-cosmetology .page-articles__row .page-cosmetology__col-3,
 .page-cosmetology .page-category__row .all-products__col-3,
+.page-cosmetology .page-category__row .page-articles__col-3,
 .page-cosmetology .page-category__row .page-category__col-3,
 .page-cosmetology .page-category__row .page-cosmetology__col-3,
 .page-cosmetology .page-cosmetology__row .all-products__col-3,
+.page-cosmetology .page-cosmetology__row .page-articles__col-3,
 .page-cosmetology .page-cosmetology__row .page-category__col-3,
 .page-cosmetology .page-cosmetology__row .page-cosmetology__col-3 {
   padding-top: 43px;
@@ -428,30 +521,67 @@ img {
   width: calc(25% - 30px)
 }
 .all-products .all-products__row .all-products__col-9,
+.all-products .all-products__row .page-articles__col-9,
 .all-products .all-products__row .page-category__col-9,
 .all-products .all-products__row .page-cosmetology__col-9,
+.all-products .page-articles__row .all-products__col-9,
+.all-products .page-articles__row .page-articles__col-9,
+.all-products .page-articles__row .page-category__col-9,
+.all-products .page-articles__row .page-cosmetology__col-9,
 .all-products .page-category__row .all-products__col-9,
+.all-products .page-category__row .page-articles__col-9,
 .all-products .page-category__row .page-category__col-9,
 .all-products .page-category__row .page-cosmetology__col-9,
 .all-products .page-cosmetology__row .all-products__col-9,
+.all-products .page-cosmetology__row .page-articles__col-9,
 .all-products .page-cosmetology__row .page-category__col-9,
 .all-products .page-cosmetology__row .page-cosmetology__col-9,
+.page-articles .all-products__row .all-products__col-9,
+.page-articles .all-products__row .page-articles__col-9,
+.page-articles .all-products__row .page-category__col-9,
+.page-articles .all-products__row .page-cosmetology__col-9,
+.page-articles .page-articles__row .all-products__col-9,
+.page-articles .page-articles__row .page-articles__col-9,
+.page-articles .page-articles__row .page-category__col-9,
+.page-articles .page-articles__row .page-cosmetology__col-9,
+.page-articles .page-category__row .all-products__col-9,
+.page-articles .page-category__row .page-articles__col-9,
+.page-articles .page-category__row .page-category__col-9,
+.page-articles .page-category__row .page-cosmetology__col-9,
+.page-articles .page-cosmetology__row .all-products__col-9,
+.page-articles .page-cosmetology__row .page-articles__col-9,
+.page-articles .page-cosmetology__row .page-category__col-9,
+.page-articles .page-cosmetology__row .page-cosmetology__col-9,
 .page-category .all-products__row .all-products__col-9,
+.page-category .all-products__row .page-articles__col-9,
 .page-category .all-products__row .page-category__col-9,
 .page-category .all-products__row .page-cosmetology__col-9,
+.page-category .page-articles__row .all-products__col-9,
+.page-category .page-articles__row .page-articles__col-9,
+.page-category .page-articles__row .page-category__col-9,
+.page-category .page-articles__row .page-cosmetology__col-9,
 .page-category .page-category__row .all-products__col-9,
+.page-category .page-category__row .page-articles__col-9,
 .page-category .page-category__row .page-category__col-9,
 .page-category .page-category__row .page-cosmetology__col-9,
 .page-category .page-cosmetology__row .all-products__col-9,
+.page-category .page-cosmetology__row .page-articles__col-9,
 .page-category .page-cosmetology__row .page-category__col-9,
 .page-category .page-cosmetology__row .page-cosmetology__col-9,
 .page-cosmetology .all-products__row .all-products__col-9,
+.page-cosmetology .all-products__row .page-articles__col-9,
 .page-cosmetology .all-products__row .page-category__col-9,
 .page-cosmetology .all-products__row .page-cosmetology__col-9,
+.page-cosmetology .page-articles__row .all-products__col-9,
+.page-cosmetology .page-articles__row .page-articles__col-9,
+.page-cosmetology .page-articles__row .page-category__col-9,
+.page-cosmetology .page-articles__row .page-cosmetology__col-9,
 .page-cosmetology .page-category__row .all-products__col-9,
+.page-cosmetology .page-category__row .page-articles__col-9,
 .page-cosmetology .page-category__row .page-category__col-9,
 .page-cosmetology .page-category__row .page-cosmetology__col-9,
 .page-cosmetology .page-cosmetology__row .all-products__col-9,
+.page-cosmetology .page-cosmetology__row .page-articles__col-9,
 .page-cosmetology .page-cosmetology__row .page-category__col-9,
 .page-cosmetology .page-cosmetology__row .page-cosmetology__col-9 {
   -webkit-box-sizing: border-box;
@@ -463,6 +593,8 @@ img {
 }
 .all-products .all-products-content,
 .all-products .page-category,
+.page-articles .all-products-content,
+.page-articles .page-category,
 .page-category .all-products-content,
 .page-category .page-category,
 .page-cosmetology .all-products-content,
@@ -471,6 +603,8 @@ img {
 }
 .all-products .all-products-content__text,
 .all-products .page-category__text,
+.page-articles .all-products-content__text,
+.page-articles .page-category__text,
 .page-category .all-products-content__text,
 .page-category .page-category__text,
 .page-cosmetology .all-products-content__text,
@@ -479,6 +613,8 @@ img {
 }
 .all-products .all-products-content__text p,
 .all-products .page-category__text p,
+.page-articles .all-products-content__text p,
+.page-articles .page-category__text p,
 .page-category .all-products-content__text p,
 .page-category .page-category__text p,
 .page-cosmetology .all-products-content__text p,
@@ -487,6 +623,8 @@ img {
 }
 .all-products .all-products-content__list,
 .all-products .page-category__list,
+.page-articles .all-products-content__list,
+.page-articles .page-category__list,
 .page-category .all-products-content__list,
 .page-category .page-category__list,
 .page-cosmetology .all-products-content__list,
@@ -504,6 +642,8 @@ img {
 }
 .all-products .all-products-content__list-item,
 .all-products .page-category__list-item,
+.page-articles .all-products-content__list-item,
+.page-articles .page-category__list-item,
 .page-category .all-products-content__list-item,
 .page-category .page-category__list-item,
 .page-cosmetology .all-products-content__list-item,
@@ -516,6 +656,7 @@ img {
   width: calc(50% - 30px)
 }
 .all-products .list-item,
+.page-articles .list-item,
 .page-category .list-item,
 .page-cosmetology .list-item {
   display: -webkit-box;
@@ -524,6 +665,7 @@ img {
   padding-bottom: 45px
 }
 .all-products .list-item__img,
+.page-articles .list-item__img,
 .page-category .list-item__img,
 .page-cosmetology .list-item__img {
   width: 80px;
@@ -531,6 +673,7 @@ img {
   margin-right: 30px
 }
 .all-products .list-item__title,
+.page-articles .list-item__title,
 .page-category .list-item__title,
 .page-cosmetology .list-item__title {
   margin-bottom: 4px;
@@ -542,11 +685,13 @@ img {
   transition: .2s ease-in-out
 }
 .all-products .list-item__title:hover,
+.page-articles .list-item__title:hover,
 .page-category .list-item__title:hover,
 .page-cosmetology .list-item__title:hover {
   color: #08c
 }
 .all-products .list-item__links,
+.page-articles .list-item__links,
 .page-category .list-item__links,
 .page-cosmetology .list-item__links {
   display: -webkit-box;
@@ -556,6 +701,7 @@ img {
   flex-wrap: wrap
 }
 .all-products .list-item__link,
+.page-articles .list-item__link,
 .page-category .list-item__link,
 .page-cosmetology .list-item__link {
   margin-right: 8px;
@@ -564,11 +710,13 @@ img {
   color: #08c
 }
 .all-products .list-item__link:hover,
+.page-articles .list-item__link:hover,
 .page-category .list-item__link:hover,
 .page-cosmetology .list-item__link:hover {
   text-decoration: underline
 }
 .all-products .list-item__desc,
+.page-articles .list-item__desc,
 .page-category .list-item__desc,
 .page-cosmetology .list-item__desc {
   margin-top: 4px;
@@ -577,19 +725,22 @@ img {
   color: #666
 }
 .all-products .all-products__aside .aside__banner,
+.page-articles .all-products__aside .aside__banner,
 .page-category .all-products__aside .aside__banner,
 .page-cosmetology .all-products__aside .aside__banner {
   margin-bottom: 21px
 }
 .all-products .aside-advantages__item,
+.page-articles .aside-advantages__item,
 .page-category .aside-advantages__item,
 .page-cosmetology .aside-advantages__item {
   margin-bottom: 28px;
   padding-top: 14px;
   padding-bottom: 19px;
-  border-bottom: 1px solid #f2f2f2
+  border-bottom: 1px solid #e8e8e8
 }
 .all-products .aside-advantages__img,
+.page-articles .aside-advantages__img,
 .page-category .aside-advantages__img,
 .page-cosmetology .aside-advantages__img {
   float: left;
@@ -599,12 +750,14 @@ img {
   height: 60px
 }
 .all-products .aside-advantages__title,
+.page-articles .aside-advantages__title,
 .page-category .aside-advantages__title,
 .page-cosmetology .aside-advantages__title {
   line-height: 24px;
   color: #222
 }
 .all-products .aside-advantages__desc,
+.page-articles .aside-advantages__desc,
 .page-category .aside-advantages__desc,
 .page-cosmetology .aside-advantages__desc {
   font-size: 13px;
@@ -612,6 +765,7 @@ img {
   color: #666
 }
 .all-products .aside-text,
+.page-articles .aside-text,
 .page-category .aside-text,
 .page-cosmetology .aside-text {
   line-height: 24px
@@ -966,6 +1120,13 @@ img {
   font-size: 14px;
   line-height: inherit;
   color: #333
+}
+.page-articles .content-wrapper {
+  height: auto;
+  padding-bottom: 20px
+}
+.page-articles .articles-item--big .articles-item__desc {
+  margin-bottom: 23px
 }
 .header {
   background: url(../img/header/header-bg.jpg) center center no-repeat;
@@ -2314,6 +2475,33 @@ img {
   }
 }
 @media screen and (max-width:992px) {
+  .page-articles .grid-container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr
+  }
+  .page-articles .item-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1/1/2/3
+  }
+  .page-articles .item-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2
+  }
+  .page-articles .item-3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/2/3/3
+  }
   .grid-container {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -2359,76 +2547,155 @@ img {
     margin-top: 65px
   }
   .all-products,
+  .page-articles,
   .page-category,
   .page-cosmetology {
     padding-bottom: 90px
   }
   .all-products .all-products__row .all-products__col-3,
+  .all-products .all-products__row .page-articles__col-3,
   .all-products .all-products__row .page-category__col-3,
   .all-products .all-products__row .page-cosmetology__col-3,
+  .all-products .page-articles__row .all-products__col-3,
+  .all-products .page-articles__row .page-articles__col-3,
+  .all-products .page-articles__row .page-category__col-3,
+  .all-products .page-articles__row .page-cosmetology__col-3,
   .all-products .page-category__row .all-products__col-3,
+  .all-products .page-category__row .page-articles__col-3,
   .all-products .page-category__row .page-category__col-3,
   .all-products .page-category__row .page-cosmetology__col-3,
   .all-products .page-cosmetology__row .all-products__col-3,
+  .all-products .page-cosmetology__row .page-articles__col-3,
   .all-products .page-cosmetology__row .page-category__col-3,
   .all-products .page-cosmetology__row .page-cosmetology__col-3,
+  .page-articles .all-products__row .all-products__col-3,
+  .page-articles .all-products__row .page-articles__col-3,
+  .page-articles .all-products__row .page-category__col-3,
+  .page-articles .all-products__row .page-cosmetology__col-3,
+  .page-articles .page-articles__row .all-products__col-3,
+  .page-articles .page-articles__row .page-articles__col-3,
+  .page-articles .page-articles__row .page-category__col-3,
+  .page-articles .page-articles__row .page-cosmetology__col-3,
+  .page-articles .page-category__row .all-products__col-3,
+  .page-articles .page-category__row .page-articles__col-3,
+  .page-articles .page-category__row .page-category__col-3,
+  .page-articles .page-category__row .page-cosmetology__col-3,
+  .page-articles .page-cosmetology__row .all-products__col-3,
+  .page-articles .page-cosmetology__row .page-articles__col-3,
+  .page-articles .page-cosmetology__row .page-category__col-3,
+  .page-articles .page-cosmetology__row .page-cosmetology__col-3,
   .page-category .all-products__row .all-products__col-3,
+  .page-category .all-products__row .page-articles__col-3,
   .page-category .all-products__row .page-category__col-3,
   .page-category .all-products__row .page-cosmetology__col-3,
+  .page-category .page-articles__row .all-products__col-3,
+  .page-category .page-articles__row .page-articles__col-3,
+  .page-category .page-articles__row .page-category__col-3,
+  .page-category .page-articles__row .page-cosmetology__col-3,
   .page-category .page-category__row .all-products__col-3,
+  .page-category .page-category__row .page-articles__col-3,
   .page-category .page-category__row .page-category__col-3,
   .page-category .page-category__row .page-cosmetology__col-3,
   .page-category .page-cosmetology__row .all-products__col-3,
+  .page-category .page-cosmetology__row .page-articles__col-3,
   .page-category .page-cosmetology__row .page-category__col-3,
   .page-category .page-cosmetology__row .page-cosmetology__col-3,
   .page-cosmetology .all-products__row .all-products__col-3,
+  .page-cosmetology .all-products__row .page-articles__col-3,
   .page-cosmetology .all-products__row .page-category__col-3,
   .page-cosmetology .all-products__row .page-cosmetology__col-3,
+  .page-cosmetology .page-articles__row .all-products__col-3,
+  .page-cosmetology .page-articles__row .page-articles__col-3,
+  .page-cosmetology .page-articles__row .page-category__col-3,
+  .page-cosmetology .page-articles__row .page-cosmetology__col-3,
   .page-cosmetology .page-category__row .all-products__col-3,
+  .page-cosmetology .page-category__row .page-articles__col-3,
   .page-cosmetology .page-category__row .page-category__col-3,
   .page-cosmetology .page-category__row .page-cosmetology__col-3,
   .page-cosmetology .page-cosmetology__row .all-products__col-3,
+  .page-cosmetology .page-cosmetology__row .page-articles__col-3,
   .page-cosmetology .page-cosmetology__row .page-category__col-3,
   .page-cosmetology .page-cosmetology__row .page-cosmetology__col-3 {
     display: none
   }
   .all-products .all-products-content__list-item,
   .all-products .all-products__row .all-products__col-9,
+  .all-products .all-products__row .page-articles__col-9,
   .all-products .all-products__row .page-category__col-9,
   .all-products .all-products__row .page-cosmetology__col-9,
+  .all-products .page-articles__row .all-products__col-9,
+  .all-products .page-articles__row .page-articles__col-9,
+  .all-products .page-articles__row .page-category__col-9,
+  .all-products .page-articles__row .page-cosmetology__col-9,
   .all-products .page-category__list-item,
   .all-products .page-category__row .all-products__col-9,
+  .all-products .page-category__row .page-articles__col-9,
   .all-products .page-category__row .page-category__col-9,
   .all-products .page-category__row .page-cosmetology__col-9,
   .all-products .page-cosmetology__row .all-products__col-9,
+  .all-products .page-cosmetology__row .page-articles__col-9,
   .all-products .page-cosmetology__row .page-category__col-9,
   .all-products .page-cosmetology__row .page-cosmetology__col-9,
+  .page-articles .all-products-content__list-item,
+  .page-articles .all-products__row .all-products__col-9,
+  .page-articles .all-products__row .page-articles__col-9,
+  .page-articles .all-products__row .page-category__col-9,
+  .page-articles .all-products__row .page-cosmetology__col-9,
+  .page-articles .page-articles__row .all-products__col-9,
+  .page-articles .page-articles__row .page-articles__col-9,
+  .page-articles .page-articles__row .page-category__col-9,
+  .page-articles .page-articles__row .page-cosmetology__col-9,
+  .page-articles .page-category__list-item,
+  .page-articles .page-category__row .all-products__col-9,
+  .page-articles .page-category__row .page-articles__col-9,
+  .page-articles .page-category__row .page-category__col-9,
+  .page-articles .page-category__row .page-cosmetology__col-9,
+  .page-articles .page-cosmetology__row .all-products__col-9,
+  .page-articles .page-cosmetology__row .page-articles__col-9,
+  .page-articles .page-cosmetology__row .page-category__col-9,
+  .page-articles .page-cosmetology__row .page-cosmetology__col-9,
   .page-category .all-products-content__list-item,
   .page-category .all-products__row .all-products__col-9,
+  .page-category .all-products__row .page-articles__col-9,
   .page-category .all-products__row .page-category__col-9,
   .page-category .all-products__row .page-cosmetology__col-9,
+  .page-category .page-articles__row .all-products__col-9,
+  .page-category .page-articles__row .page-articles__col-9,
+  .page-category .page-articles__row .page-category__col-9,
+  .page-category .page-articles__row .page-cosmetology__col-9,
   .page-category .page-category__list-item,
   .page-category .page-category__row .all-products__col-9,
+  .page-category .page-category__row .page-articles__col-9,
   .page-category .page-category__row .page-category__col-9,
   .page-category .page-category__row .page-cosmetology__col-9,
   .page-category .page-cosmetology__row .all-products__col-9,
+  .page-category .page-cosmetology__row .page-articles__col-9,
   .page-category .page-cosmetology__row .page-category__col-9,
   .page-category .page-cosmetology__row .page-cosmetology__col-9,
   .page-cosmetology .all-products-content__list-item,
   .page-cosmetology .all-products__row .all-products__col-9,
+  .page-cosmetology .all-products__row .page-articles__col-9,
   .page-cosmetology .all-products__row .page-category__col-9,
   .page-cosmetology .all-products__row .page-cosmetology__col-9,
+  .page-cosmetology .page-articles__row .all-products__col-9,
+  .page-cosmetology .page-articles__row .page-articles__col-9,
+  .page-cosmetology .page-articles__row .page-category__col-9,
+  .page-cosmetology .page-articles__row .page-cosmetology__col-9,
   .page-cosmetology .page-category__list-item,
   .page-cosmetology .page-category__row .all-products__col-9,
+  .page-cosmetology .page-category__row .page-articles__col-9,
   .page-cosmetology .page-category__row .page-category__col-9,
   .page-cosmetology .page-category__row .page-cosmetology__col-9,
   .page-cosmetology .page-cosmetology__row .all-products__col-9,
+  .page-cosmetology .page-cosmetology__row .page-articles__col-9,
   .page-cosmetology .page-cosmetology__row .page-category__col-9,
   .page-cosmetology .page-cosmetology__row .page-cosmetology__col-9 {
     width: calc(100% - 30px)
   }
   .all-products .all-products-content__list-item,
   .all-products .page-category__list-item,
+  .page-articles .all-products-content__list-item,
+  .page-articles .page-category__list-item,
   .page-category .all-products-content__list-item,
   .page-category .page-category__list-item,
   .page-cosmetology .all-products-content__list-item,
@@ -2573,6 +2840,33 @@ img {
   }
 }
 @media screen and (max-width:576px) {
+  .page-articles .grid-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr
+  }
+  .page-articles .item-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2
+  }
+  .page-articles .item-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2
+  }
+  .page-articles .item-3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2
+  }
   .grid-container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -2616,6 +2910,7 @@ img {
     grid-area: 5/1/6/2
   }
   .all-products .list-item,
+  .page-articles .list-item,
   .page-category .list-item,
   .page-cosmetology .list-item {
     -webkit-box-orient: vertical;
@@ -2624,11 +2919,13 @@ img {
     flex-direction: column
   }
   .all-products .list-item__img,
+  .page-articles .list-item__img,
   .page-category .list-item__img,
   .page-cosmetology .list-item__img {
     margin: 0 auto 15px
   }
   .all-products .list-item__title,
+  .page-articles .list-item__title,
   .page-category .list-item__title,
   .page-cosmetology .list-item__title {
     margin-bottom: 10px;
