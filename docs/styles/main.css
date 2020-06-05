@@ -1360,6 +1360,11 @@ img {
   margin-right: 0;
   width: calc(100% / 12 * 6 - 7px)
 }
+.services__big-card:hover .img-wrap {
+  background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.36)),to(rgba(0,0,0,.36)));
+  background: -o-linear-gradient(bottom,rgba(0,0,0,.36),rgba(0,0,0,.36));
+  background: linear-gradient(0deg,rgba(0,0,0,.36),rgba(0,0,0,.36))
+}
 .services__small-card {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -1368,6 +1373,11 @@ img {
   margin-left: 0;
   margin-right: 0;
   width: calc(100% / 12 * 3 - 10px)
+}
+.services__small-card:hover .img-wrap {
+  background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.36)),to(rgba(0,0,0,.36)));
+  background: -o-linear-gradient(bottom,rgba(0,0,0,.36),rgba(0,0,0,.36));
+  background: linear-gradient(0deg,rgba(0,0,0,.36),rgba(0,0,0,.36))
 }
 .services__img {
   position: relative
