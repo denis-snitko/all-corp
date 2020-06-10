@@ -1,0 +1,21 @@
+// Modal-window
+.modal-window-overlay
+    .modal-window
+        span.modal-window__close
+        .modal-window__title
+            | Заказать звонок
+        p Представьтесь, мы вам перезвоним.
+        form.form(action='')
+            .form__row
+                label.form__name
+                    | Ваше имя:<span>&nbsp;*</span>
+                input(type='text' value='' name="name" required)
+            .form__row
+                label.form__tel
+                    | Ваш телефон:<span>&nbsp;*</span>
+                input(type='tel' value='' name="tel" required)
+            div.checkbox__body
+                input#form__checkbox(type='checkbox' value='' required)
+                label.form__checkbox(for="form__checkbox") Я согласен на <a href="">обработку персональных данных</a>
+            button.base-button.hero__button(type='submit') Отправить
+// ./ Modal-window
