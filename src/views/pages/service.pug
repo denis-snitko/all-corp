@@ -1,0 +1,250 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Автоматизация"
+
+block content
+    // Header
+    header.header.header--page
+        .container
+            .top-header.top-header__row
+                .top-header__item
+                    .logo.top-header__logo
+                        include ../../blocks/components/logo/logo.pug
+                .top-header__item
+                    p.top-header__slogan Готовое решение для создания корпоративного сайта
+                .top-header__item
+                    .top-header__adress Челябинск, ул.Лермонтова 21, 3 этаж, офис 4
+                .top-header__item
+                    .top-header__city Челябинск
+                .top-header__item
+                    a.top-header__tel(href='tel:+7(000)0000000') +7 (000) 000-00-00
+                    span.top-header__work Пн - Вс: 10.00 - 19.00
+                .top-header__item
+                    button.base-button.top-header__button Заказать звонок
+                .burger-menu(data-menuburgeropen='')
+                    span.burger-menu__burger-line
+                    .burger-menu__container
+                        span.burger-menu__close
+
+                        ul.burger-menu__list
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Компания
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') О компании
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') История
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Лицензии
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Партнеры
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Сотрудники
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Каталог
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') О компании
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') История
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Лицензии
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Услуги
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') О компании
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') История
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Лицензии
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Партнеры
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Проекты
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') О компании
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') История
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Курсы
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Курсы
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Цены
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Цены
+                            li.burger-menu__item
+                                a.burger-menu__link(href='#') Информация
+                                ul.sub-menu
+                                    li.sub-menu__item
+                                        a.sub-menu__link(href='#') Информация
+                            li.burger-menu__item
+                                a.burger-menu__link.burger-menu__link-contacts(href='#') Контакты
+
+            nav.menu.menu--page
+                ul.menu__list
+                    li.menu__item
+                        a.menu__link(href='#') Компания
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') О компании
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') История
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Лицензии
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Партнеры
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Сотрудники
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Отзывы
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Вакансии
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Реквизиты
+                    li.menu__item
+                        a.menu__link(href='#') Каталог
+                        include ../../blocks/components/catalog-menu/catalog-menu
+                    li.menu__item
+                        a.menu__link(href='#') Услуги
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') О компании
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') История
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Лицензии
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Партнеры
+                    li.menu__item
+                        a.menu__link(href='#') Проекты
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') О компании
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') История
+                    li.menu__item
+                        a.menu__link(href='#') Курсы
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Курсы
+                    li.menu__item
+                        a.menu__link(href='#') Цены
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Цены
+                    li.menu__item
+                        a.menu__link(href='#') Информация
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a.sub-menu__link(href='#') Информация
+                    li.menu__item
+                        a.menu__link.menu__link-contacts(href='#') Контакты
+                    li.menu__item            
+                        svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            g(clip-path='url(#clip0)')
+                                path(fill-rule='evenodd' clip-rule='evenodd' d='M15.644 15.644C15.4257 15.8622 15.1297 15.9849 14.821 15.9849C14.5123 15.9849 14.2163 15.8622 13.998 15.644L11.048 12.694C9.61076 13.7186 7.84095 14.1655 6.08959 13.9462C4.33823 13.727 2.73325 12.8574 1.59301 11.5101C0.452762 10.1629 -0.139461 8.43621 -0.0661966 6.6727C0.00706767 4.90918 0.740467 3.23762 1.98854 1.98955C3.2366 0.741482 4.90817 0.00808238 6.67168 -0.0651819C8.4352 -0.138446 10.1618 0.453777 11.5091 1.59402C12.8564 2.73427 13.7259 4.33924 13.9452 6.0906C14.1645 7.84196 13.7175 9.61177 12.693 11.049L15.644 14C15.8616 14.2182 15.9838 14.5138 15.9838 14.822C15.9838 15.1302 15.8616 15.4258 15.644 15.644ZM6.99998 2C6.01108 2 5.04438 2.29324 4.22213 2.84265C3.39989 3.39206 2.75902 4.17295 2.38059 5.08658C2.00215 6.00021 1.90313 7.00555 2.09606 7.97545C2.28898 8.94536 2.76519 9.83627 3.46445 10.5355C4.16371 11.2348 5.05463 11.711 6.02453 11.9039C6.99444 12.0969 7.99977 11.9978 8.9134 11.6194C9.82703 11.241 10.6079 10.6001 11.1573 9.77785C11.7067 8.9556 12 7.9889 12 7C12 6.34339 11.8707 5.69321 11.6194 5.08658C11.3681 4.47995 10.9998 3.92876 10.5355 3.46446C10.0712 3.00017 9.52003 2.63187 8.9134 2.3806C8.30677 2.12933 7.65659 2 6.99998 2Z' fill='#222222')
+                            defs
+                                clippath#clip0
+                                rect(width='16' height='16' fill='white')
+
+    main
+        section.page-category
+
+            .content-header
+                .container
+                    h1.content-header__title Автоматизация
+                    .bread-crumbs
+                        ul.bread-crumbs__list
+                            li.bread-crumbs__item
+                                a.bread-crumbs__link(href='./index.html') Главная
+                            li.bread-crumbs__item
+                                a.bread-crumbs__link(href='./all-products.html') Услуги
+                            li.bread-crumbs__item Автоматизация
+
+            .container
+                .page-category__row
+                    .page-category__col-3
+                        .all-products__aside
+                            ul.aside-menu
+                                li.aside-menu__item
+                                    a.aside-menu__link.active(href="") Автоматизация
+                                    ul.sub-menu
+                                        li.sub-menu__item
+                                            a.sub-menu__link(href="./cosmetology.html") Автоматизация отдела продаж
+                                        li.sub-menu__item
+                                            a.sub-menu__link(href="") Комплексная автоматизация
+                                        li.sub-menu__item
+                                            a.sub-menu__link(href="") POS-системы
+                                li.aside-menu__item
+                                    a.aside-menu__link(href="all-medical.html") Аренда спецтехники
+                                li.aside-menu__item
+                                    a.aside-menu__link(href="") Инженерные системы
+                                li.aside-menu__item
+                                    a.aside-menu__link(href="") Металлоконструкции
+                                li.aside-menu__item
+                                    a.aside-menu__link(href="") Отделка фасада
+                                li.aside-menu__item
+                                    a.aside-menu__link(href="") Проектирование
+
+                        img.aside__banner(src="./img/banners/aside-banner-1.jpg" alt="")
+                        .aside-advantages
+                            .aside-advantages__item
+                                img.aside-advantages__img(src="./img/icons/adv-item-1.png" alt="1")
+                                .aside-advantages__title Оптимальный выбор
+                                .aside-advantages__desc Низкие цены и широкий ассортимент
+                            .aside-advantages__item
+                                img.aside-advantages__img(src="./img/icons/adv-item-2.png" alt="2")
+                                .aside-advantages__title Всегда рядом
+                                .aside-advantages__desc Широкая сеть представительств
+                        .aside-text 
+                            p Цель нашей компании — предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.
+
+                    .page-category__col-9
+                        .content-wrapper
+                            h2.page-category__title Инструменты для автоматизации торговли, взаимодействия с клиентами и других бизнес-процессов.
+
+                            .service-body
+                                .service-card
+                                    img.service-card__img(src="./img/services/card-img-1.jpg" alt="")
+                                    .service-card__body
+                                        h3.service-card__title Автоматизация отдела продаж
+                                        p Деятельность коммерческой организации оценивается качеством и количеством проданных товаров или услуг. При  тандартной работе с таким ногоступенчатым процессом как продажи упускается много незафиксированной информации, даже если сотрудники ответственны и имеют хорошую память.
+                                        p.service-card__price от 12 000 р./час
+                                            span.service-card__price.service-card__price--grey от 13 900 р./час
+                                        button.base-button.hero__button Подробнее
+
+                                .service-card
+                                    img.service-card__img(src="./img/services/card-img-2.jpg" alt="")
+                                    .service-card__body
+                                        h3.service-card__title Комплексная автоматизация
+                                        p Комплексная автоматизация – это оптимизация работы всех направлений компании. Если предприятие планирует развиваться, то работа каждого отдела должна быть автоматизирована.
+                                        button.base-button.hero__button Подробнее
+                                        
+                                .service-card
+                                    img.service-card__img(src="./img/services/card-img-3.jpg" alt="")
+                                    .service-card__body
+                                        h3.service-card__title POS-системы
+                                        p POS-система – это программно-аппаратный комплекс, который автоматизирует работу кассиров. Она пришла на смену устаревшим автономным кассовым машинам и используется для контроля продаж на кассах крупных торговых центров и в небольших магазинах. Компания «Олл Корп» предлагает программно-аппаратный комплекс для розничной и оптовой торговли.
+                                        button.base-button.hero__button Подробнее
+
+                            h2 Автоматизация бизнеса
+                            .all-products-content__text
+                                p
+                                    |Автоматизация торговли – это процесс внедрения в организацию специального оборудования или программного обеспечения. Направленная автоматизация оптимизирует бизнес-процессы, увеличивает эффективность продаж и не допускает возникновения ошибок из-за человеческого фактора.
+                                p
+                                    |Компания «Олл Корп» уже автоматизировала 126 предприятий. Мы помогаем добиться финансового успеха и доверия ваших клиентов с помощью современных методов оптимизации. Автоматизация бизнеса поможет структурировать работу и принимать только правильные и эффективные для компании решения.
+
+
+    include ../../blocks/modules/footer/footer.pug
+
+block scripts
+    script(src="./js/vendor.js")
+    script(src="./js/main.js")
+
+
