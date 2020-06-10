@@ -750,6 +750,29 @@
           </div>
         </div>
         <p class="footer__copyright">© Все права защищены</p>
+        <!-- Modal-window-->
+        <div class="modal-window-overlay">
+          <div class="modal-window"><span class="modal-window__close"></span>
+            <div class="modal-window__title">Заказать звонок</div>
+            <p>Представьтесь, мы вам перезвоним.</p>
+            <form class="form" action="">
+              <div class="form__row">
+                <label class="form__name">Ваше имя:<span>&nbsp;*</span></label>
+                <input type="text" value="" name="name" required>
+              </div>
+              <div class="form__row">
+                <label class="form__tel">Ваш телефон:<span>&nbsp;*</span></label>
+                <input type="tel" value="" name="tel" required>
+              </div>
+              <div class="checkbox__body">
+                <input id="form__checkbox" type="checkbox" value="" required>
+                <label class="form__checkbox" for="form__checkbox">Я согласен на <a href="">обработку персональных данных</a></label>
+              </div>
+              <button class="base-button hero__button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <!-- ./ Modal-window-->
       </div>
     </footer>
     <script src="./js/vendor.js"></script>

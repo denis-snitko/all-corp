@@ -92,6 +92,59 @@ $(document).ready(function () {
             }
         }
     });
+
+    $(".card__col-4 a").click(function () {
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
+    });
+
+    $(".card__base-button").click(function () {
+        $('.modal-window-overlay').attr('style', 'display: flex');
+    })
+
 });
+
+
+// Modal
+const modalWindowOverlay = document.querySelector('.modal-window-overlay');
+const modalWindowClose = document.querySelector('.modal-window__close');
+const labelText = document.querySelector('.form__name');
+const inputText = document.querySelector('.form__row > input');
+const labelTel = document.querySelector('.form__tel');
+const inputTel = document.querySelector('input[type="tel"]');
+
+modalWindowClose.addEventListener('click', () => {
+    modalWindowOverlay.setAttribute('style', 'display: none');
+    labelText.classList.remove('label--active');
+    inputText.value = '';
+
+    labelTel.classList.remove('label--active');
+    inputTel.value = '';
+
+})
+
+labelText.addEventListener('click', () => {
+    labelText.classList.add('label--active');
+    inputText.focus();
+})
+
+inputText.addEventListener('focus', () => {
+    labelText.classList.add('label--active');
+})
+
+
+labelTel.addEventListener('click', () => {
+    labelTel.classList.add('label--active');
+    inputTel.focus();
+})
+
+inputTel.addEventListener('focus', () => {
+    labelTel.classList.add('label--active');
+})
 
 

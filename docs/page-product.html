@@ -237,7 +237,7 @@
                 <div class="card__col-8"><img class="card__img" src="./img/products/big-product-1.png" alt=""></div>
                 <div class="card__col-4">
                   <div class="card__descr"> 
-                    <p>Александритовый лазер для удаления волосяных луковиц и пигментных пятен.</p><a href="#">Подробнее</a>
+                    <p>Александритовый лазер для удаления волосяных луковиц и пигментных пятен.</p><a href="#tabs">Подробнее</a>
                   </div>
                   <div class="card__btn-inner">
                     <button class="base-button second-button card__base-button">Узнать цену</button>
@@ -247,7 +247,7 @@
                     <p class="card-desc__title">Характеристики</p>
                     <p class="card-desc__text">Масса, кг</p><span>86</span>
                     <p class="card-desc__text">Размер, см х см</p><span>90 см x 45 см x 60 см</span>
-                    <p class="card-desc__text">Размещение</p><span>напольный</span><a href="#">Все характеристики</a>
+                    <p class="card-desc__text">Размещение</p><span>напольный</span><a href="#tabs">Все характеристики</a>
                   </div>
                 </div>
               </div>
@@ -274,7 +274,7 @@
                 </div>
               </div>
             </div>
-            <div class="page-product-tabs">
+            <div class="page-product-tabs" id="tabs">
               <div class="tabs product-card__tabs">
                 <div class="tabs__title">
                   <ul class="tabs__title-list">
@@ -492,6 +492,29 @@
           </div>
         </div>
         <p class="footer__copyright">© Все права защищены</p>
+        <!-- Modal-window-->
+        <div class="modal-window-overlay">
+          <div class="modal-window"><span class="modal-window__close"></span>
+            <div class="modal-window__title">Заказать звонок</div>
+            <p>Представьтесь, мы вам перезвоним.</p>
+            <form class="form" action="">
+              <div class="form__row">
+                <label class="form__name">Ваше имя:<span>&nbsp;*</span></label>
+                <input type="text" value="" name="name" required>
+              </div>
+              <div class="form__row">
+                <label class="form__tel">Ваш телефон:<span>&nbsp;*</span></label>
+                <input type="tel" value="" name="tel" required>
+              </div>
+              <div class="checkbox__body">
+                <input id="form__checkbox" type="checkbox" value="" required>
+                <label class="form__checkbox" for="form__checkbox">Я согласен на <a href="">обработку персональных данных</a></label>
+              </div>
+              <button class="base-button hero__button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <!-- ./ Modal-window-->
       </div>
     </footer>
     <script src="./js/vendor.js"></script>
